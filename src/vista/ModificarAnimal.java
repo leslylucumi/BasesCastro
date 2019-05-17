@@ -49,6 +49,7 @@ public class ModificarAnimal extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
 
     }
+    //holaX2
  //HOLAAAAAAAAQUEMAS
     /**
      * This method is called from within the constructor to initialize the form.
