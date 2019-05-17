@@ -36,7 +36,7 @@ public class ModificarAnimal extends javax.swing.JFrame {
     public ModificarAnimal() {
         initComponents();
         Jedad.setEnabled(false);
-        JimgcaS.setEnabled(false);
+        JimgcaSSSSS.setEnabled(false);
         Jimgcua.setEnabled(false);
         Jimga.setEnabled(false);
         Jgeneroa.setEnabled(false);
