@@ -474,6 +474,9 @@ public class ModificarAnimal extends javax.swing.JFrame {
             Jdescripa.setText(objan.getDescripcion());
             Jnombre.setText(objan.getNombre());
             Jpesoa.setText(objan.getPeso() + "");
+            Truta3.setText(objan.getImganimal());
+            Truta1.setText(objan.getImganimalcara());
+            Truta2.setText(objan.getImganimalcuerpo());
 
             int id_Alimentacion = 0;
             int id_Especie = 0;
@@ -557,7 +560,10 @@ public class ModificarAnimal extends javax.swing.JFrame {
         int id_especie_animal = 0;
         int id_habitat_animal = 0;
         int id_clasif_animal = 0;
-
+        
+        img_animalcara = Truta1.getText();
+        img_animalcuerpo = Truta2.getText();
+        img_animal = Truta3.getText();
 //        if (Jimga.getText() != "") {
 //            img_animal = Jimga.getText();
 //        }
