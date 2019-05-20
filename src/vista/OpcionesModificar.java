@@ -30,44 +30,76 @@ public class OpcionesModificar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Bpasaranimal = new javax.swing.JButton();
-        Bpasarcuidador = new javax.swing.JButton();
-        Bpasarveterinario = new javax.swing.JButton();
-        Bcerrarmenu = new javax.swing.JButton();
+        Balim = new javax.swing.JButton();
+        Bveterinario = new javax.swing.JButton();
+        Bcuidador = new javax.swing.JButton();
+        Bcerrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        Banimal = new javax.swing.JButton();
+        Bespecie = new javax.swing.JButton();
+        Bhabitat = new javax.swing.JButton();
+        Batras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Bpasaranimal.setText("animal");
-        Bpasaranimal.addActionListener(new java.awt.event.ActionListener() {
+        Balim.setText("Alimentacion");
+        Balim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BpasaranimalActionPerformed(evt);
+                BalimActionPerformed(evt);
             }
         });
 
-        Bpasarcuidador.setText("cuidador");
-        Bpasarcuidador.addActionListener(new java.awt.event.ActionListener() {
+        Bveterinario.setText("Veterinario");
+        Bveterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BpasarcuidadorActionPerformed(evt);
+                BveterinarioActionPerformed(evt);
             }
         });
 
-        Bpasarveterinario.setText("veterinario");
-        Bpasarveterinario.addActionListener(new java.awt.event.ActionListener() {
+        Bcuidador.setText("Cuidador");
+        Bcuidador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BpasarveterinarioActionPerformed(evt);
+                BcuidadorActionPerformed(evt);
             }
         });
 
-        Bcerrarmenu.setText("Cerrar");
-        Bcerrarmenu.addActionListener(new java.awt.event.ActionListener() {
+        Bcerrar.setText("Cerrar");
+        Bcerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BcerrarmenuActionPerformed(evt);
+                BcerrarActionPerformed(evt);
             }
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("OPCIONES MODIFICAR");
+
+        Banimal.setText("Animal");
+        Banimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BanimalActionPerformed(evt);
+            }
+        });
+
+        Bespecie.setText("Especie");
+        Bespecie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BespecieActionPerformed(evt);
+            }
+        });
+
+        Bhabitat.setText("Habitat");
+        Bhabitat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BhabitatActionPerformed(evt);
+            }
+        });
+
+        Batras.setText("Atras");
+        Batras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BatrasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -76,59 +108,96 @@ public class OpcionesModificar extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(Bpasaranimal, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(66, 66, 66)
-                        .addComponent(Bpasarveterinario)
-                        .addGap(68, 68, 68)
-                        .addComponent(Bpasarcuidador, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(229, 229, 229)
-                        .addComponent(Bcerrarmenu))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(170, 170, 170)
-                        .addComponent(jLabel1)))
-                .addContainerGap(78, Short.MAX_VALUE))
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(Bhabitat, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Balim, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Banimal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Bcuidador, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Bespecie, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(Bveterinario, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(115, 115, 115)
+                                .addComponent(Batras)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
+                                .addComponent(Bcerrar)))))
+                .addGap(100, 100, 100))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(65, 65, 65)
+                .addGap(24, 24, 24)
+                .addComponent(Balim, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(Banimal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Bcuidador)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Bespecie)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Bhabitat)
+                .addGap(18, 18, 18)
+                .addComponent(Bveterinario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Bpasarveterinario)
-                    .addComponent(Bpasaranimal, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Bpasarcuidador))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
-                .addComponent(Bcerrarmenu)
-                .addGap(34, 34, 34))
+                    .addComponent(Bcerrar)
+                    .addComponent(Batras)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BpasarveterinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BpasarveterinarioActionPerformed
-        InsertarVeterinario abrir = new InsertarVeterinario();
+    private void BcuidadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcuidadorActionPerformed
+        ModificarCuidador abrir = new ModificarCuidador();
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_BpasarveterinarioActionPerformed
+    }//GEN-LAST:event_BcuidadorActionPerformed
 
-    private void BpasarcuidadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BpasarcuidadorActionPerformed
-        InsertarCuidador abrir = new InsertarCuidador();
+    private void BveterinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BveterinarioActionPerformed
+        ModificarVeterinario abrir = new ModificarVeterinario();
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_BpasarcuidadorActionPerformed
+    }//GEN-LAST:event_BveterinarioActionPerformed
 
-    private void BpasaranimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BpasaranimalActionPerformed
-        InsertarAnimal abrir = new InsertarAnimal();
+    private void BalimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BalimActionPerformed
+        ModificarAlimentacion abrir = new ModificarAlimentacion();
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_BpasaranimalActionPerformed
+    }//GEN-LAST:event_BalimActionPerformed
 
-    private void BcerrarmenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarmenuActionPerformed
+    private void BcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_BcerrarmenuActionPerformed
+    }//GEN-LAST:event_BcerrarActionPerformed
+
+    private void BanimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BanimalActionPerformed
+        ModificarAnimal abrir = new ModificarAnimal();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BanimalActionPerformed
+
+    private void BespecieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BespecieActionPerformed
+        ModificarEspecie abrir = new ModificarEspecie();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BespecieActionPerformed
+
+    private void BhabitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BhabitatActionPerformed
+        ModificarHabitat abrir = new ModificarHabitat();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BhabitatActionPerformed
+
+    private void BatrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrasActionPerformed
+       Opciones abrir = new Opciones();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BatrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,10 +236,14 @@ public class OpcionesModificar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Bcerrarmenu;
-    private javax.swing.JButton Bpasaranimal;
-    private javax.swing.JButton Bpasarcuidador;
-    private javax.swing.JButton Bpasarveterinario;
+    private javax.swing.JButton Balim;
+    private javax.swing.JButton Banimal;
+    private javax.swing.JButton Batras;
+    private javax.swing.JButton Bcerrar;
+    private javax.swing.JButton Bcuidador;
+    private javax.swing.JButton Bespecie;
+    private javax.swing.JButton Bhabitat;
+    private javax.swing.JButton Bveterinario;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
