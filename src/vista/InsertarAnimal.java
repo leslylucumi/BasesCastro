@@ -271,23 +271,23 @@ public class InsertarAnimal extends javax.swing.JFrame {
         id_Especie = 0;
         id_Habitat = 0;
 
-//        for (int i = 0; i < le.size(); i++) {
-//            if (esp.equals(le.get(i).getNombreE())) {
-//                id_Especie = le.get(i).getId();
-//            }
-//        }
-//
-//        for (int i = 0; i < lA.size(); i++) {
-//            if (alim.equals(lA.get(i).getNombreA())) {
-//                id_Alimentacion = lA.get(i).getId();
-//            }
-//        }
-//
-//        for (int i = 0; i < lh.size(); i++) {
-//            if (habi.equals(lh.get(i).getNombreH())) {
-//                id_Habitat = lh.get(i).getId();
-//            }
-//        }
+        for (int i = 0; i < le.size(); i++) {
+            if (esp.equals(le.get(i).getNombreE())) {
+                id_Especie = le.get(i).getId();
+            }
+        }
+
+        for (int i = 0; i < lA.size(); i++) {
+            if (alim.equals(lA.get(i).getNombreA())) {
+                id_Alimentacion = lA.get(i).getId();
+            }
+        }
+
+        for (int i = 0; i < lh.size(); i++) {
+            if (habi.equals(lh.get(i).getNombreH())) {
+                id_Habitat = lh.get(i).getId();
+            }
+        }
         ///// 
         id_animal = Integer.parseInt(Jid.getText());
         edad = Integer.parseInt(Jedad.getText());
