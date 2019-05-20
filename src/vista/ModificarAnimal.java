@@ -132,6 +132,12 @@ public class ModificarAnimal extends javax.swing.JFrame {
             }
         });
 
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
+
         JcomboboxHabitat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JcomboboxHabitatActionPerformed(evt);
@@ -409,27 +415,34 @@ public class ModificarAnimal extends javax.swing.JFrame {
             int id_Especie = 0;
             int id_Habitat = 0;
 
-            jComboBoxEspecia.addItem(objan.getId_Especie());
-
-            ControlEspecie objce = new ControlEspecie();
-            le = objce.consultarEspecies();
-
+            int temporalespecie=objan.getId_Especie();
             for (int i = 0; i < le.size(); i++) {
-                jComboBoxEspecia.addItem(le.get(i).getNombreE());
-
+                if (temporalespecie==le.get(i).getId()){
+                    String nombre = le.get(i).getNombreE();
+                jComboBoxEspecia.setSelectedItem(nombre);
+                break;
             }
-//
-//            for (int i = 0; i < lA.size(); i++) {
-//                if (alim.equals(lA.get(i).getNombreA())) {
-//                    id_Alimentacion = lA.get(i).getId();
-//                }
-//            }
-//
-//            for (int i = 0; i < lh.size(); i++) {
-//                if (habi.equals(lh.get(i).getNombreH())) {
-//                    id_Habitat = lh.get(i).getId();
-//                }
-//            }
+            }
+            
+         int temporalalimentacion=objan.getId_Alimentacion();
+        for (int i = 0; i < lA.size(); i++) {
+                if (temporalalimentacion==lA.get(i).getId()){
+                    String nombre = lA.get(i).getNombreA();
+                jComboBox3.setSelectedItem(nombre);
+                
+                break;
+            }
+            }
+        ////
+                 int temporalhabitat=objan.getId_Habitat();
+        for (int i = 0; i < lh.size(); i++) {
+                if (temporalhabitat==lh.get(i).getId()){
+                    String nombre = lh.get(i).getNombreH();
+                JcomboboxHabitat.setSelectedItem(nombre);
+                
+                break;
+            }
+            }
 
             Jedad.setEnabled(true);
 //            Jimgca.setEnabled(true);
@@ -458,7 +471,7 @@ public class ModificarAnimal extends javax.swing.JFrame {
 
     private void jComboBoxEspeciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxEspeciaActionPerformed
 
-        // System.out.println("iten seleccionado "+jComboBox1.getSelectedItem());
+        esp = (String) jComboBoxEspecia.getSelectedItem();
     }//GEN-LAST:event_jComboBoxEspeciaActionPerformed
 
     private void BatrasanimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrasanimalActionPerformed
@@ -561,8 +574,12 @@ public class ModificarAnimal extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void JcomboboxHabitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JcomboboxHabitatActionPerformed
-        // TODO add your handling code here:
+        habi = (String) JcomboboxHabitat.getSelectedItem();
     }//GEN-LAST:event_JcomboboxHabitatActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        alim = (String) jComboBox3.getSelectedItem();
+    }//GEN-LAST:event_jComboBox3ActionPerformed
 
     /**
      * @param args the command line arguments

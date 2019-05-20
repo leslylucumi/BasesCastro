@@ -164,6 +164,11 @@ public class InsertarAnimal extends javax.swing.JFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(40, 282, 23, 14);
 
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox3);
         jComboBox3.setBounds(413, 136, 176, 20);
 
@@ -175,6 +180,11 @@ public class InsertarAnimal extends javax.swing.JFrame {
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(413, 81, 176, 20);
 
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox4);
         jComboBox4.setBounds(413, 188, 176, 20);
 
@@ -318,8 +328,8 @@ public class InsertarAnimal extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         esp = (String) jComboBox1.getSelectedItem();
-        alim = (String) jComboBox3.getSelectedItem();
-        habi = (String) jComboBox4.getSelectedItem();
+        
+        
         // System.out.println("iten seleccionado "+jComboBox1.getSelectedItem());
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
@@ -390,6 +400,14 @@ public class InsertarAnimal extends javax.swing.JFrame {
             rutaimgopcional.setText(archivo.getAbsolutePath());
         }
     }//GEN-LAST:event_BabririmgopcionalActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        alim = (String) jComboBox3.getSelectedItem();
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+        habi = (String) jComboBox4.getSelectedItem();
+    }//GEN-LAST:event_jComboBox4ActionPerformed
 
     /**
      * @param args the command line arguments
