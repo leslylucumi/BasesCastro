@@ -458,7 +458,7 @@ public class ModificarAnimal extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxEspeciaActionPerformed
 
     private void BatrasanimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrasanimalActionPerformed
-        Menu abrir = new Menu();
+        OpcionesModificar abrir = new OpcionesModificar();
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_BatrasanimalActionPerformed

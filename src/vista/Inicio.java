@@ -15,6 +15,7 @@ public class Inicio extends javax.swing.JFrame {
     /** Creates new form Inicio */
     public Inicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /** This method is called from within the constructor to
@@ -29,8 +30,8 @@ public class Inicio extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        Baceptarinicio = new javax.swing.JButton();
-        Bcerrarinicio = new javax.swing.JButton();
+        Baceptar = new javax.swing.JButton();
+        Bcerrar = new javax.swing.JButton();
         Tusuario = new javax.swing.JTextField();
         Tcontrasena = new javax.swing.JTextField();
 
@@ -43,17 +44,17 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel3.setText("Contraseña");
 
-        Baceptarinicio.setText("Aceptar");
-        Baceptarinicio.addActionListener(new java.awt.event.ActionListener() {
+        Baceptar.setText("Aceptar");
+        Baceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BaceptarinicioActionPerformed(evt);
+                BaceptarActionPerformed(evt);
             }
         });
 
-        Bcerrarinicio.setText("Cerrar");
-        Bcerrarinicio.addActionListener(new java.awt.event.ActionListener() {
+        Bcerrar.setText("Cerrar");
+        Bcerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BcerrarinicioActionPerformed(evt);
+                BcerrarActionPerformed(evt);
             }
         });
 
@@ -77,9 +78,9 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(90, 90, 90)
-                        .addComponent(Baceptarinicio)
+                        .addComponent(Baceptar)
                         .addGap(64, 64, 64)
-                        .addComponent(Bcerrarinicio, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Bcerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(108, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -97,27 +98,27 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(Tcontrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Baceptarinicio)
-                    .addComponent(Bcerrarinicio))
+                    .addComponent(Baceptar)
+                    .addComponent(Bcerrar))
                 .addGap(32, 32, 32))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BcerrarinicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarinicioActionPerformed
+    private void BcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarActionPerformed
         // TODO add your handling code here:
         System.exit(0);
-    }//GEN-LAST:event_BcerrarinicioActionPerformed
+    }//GEN-LAST:event_BcerrarActionPerformed
 
-    private void BaceptarinicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaceptarinicioActionPerformed
+    private void BaceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaceptarActionPerformed
         // TODO add your handling code here:
         int contrasena ;
         contrasena = Integer.parseInt(Tcontrasena.getText());
         int contrasena2 = 12345;
         
         if ( contrasena==contrasena2){   
-        Menu abrir = new Menu();
+        Opciones abrir = new Opciones();
         abrir.setVisible(true);
         this.setVisible(false);
         }
@@ -125,7 +126,7 @@ public class Inicio extends javax.swing.JFrame {
             System.out.println("Contraseña incorrecta");
         }
        
-    }//GEN-LAST:event_BaceptarinicioActionPerformed
+    }//GEN-LAST:event_BaceptarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,8 +164,8 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Baceptarinicio;
-    private javax.swing.JButton Bcerrarinicio;
+    private javax.swing.JButton Baceptar;
+    private javax.swing.JButton Bcerrar;
     private javax.swing.JTextField Tcontrasena;
     private javax.swing.JTextField Tusuario;
     private javax.swing.JLabel jLabel1;
