@@ -64,9 +64,10 @@ public class ModificarCuidador extends javax.swing.JFrame {
         Baceptarcuidador = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         Jidcuidador = new javax.swing.JTextField();
-        Batrascuidador = new javax.swing.JButton();
+        Bcerrar = new javax.swing.JButton();
         Bmodificarcuidador = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
+        Batras = new javax.swing.JButton();
 
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,10 +177,10 @@ public class ModificarCuidador extends javax.swing.JFrame {
             }
         });
 
-        Batrascuidador.setText("Cancelar");
-        Batrascuidador.addActionListener(new java.awt.event.ActionListener() {
+        Bcerrar.setText("Cerrar");
+        Bcerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BatrascuidadorActionPerformed(evt);
+                BcerrarActionPerformed(evt);
             }
         });
 
@@ -193,18 +194,12 @@ public class ModificarCuidador extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setText("MODIFICAR CUIDADOR");
 
+        Batras.setText("Atras");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Baceptarcuidador)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Bmodificarcuidador)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Batrascuidador)
-                .addGap(125, 125, 125))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -256,6 +251,16 @@ public class ModificarCuidador extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addComponent(Baceptarcuidador)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Bmodificarcuidador)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Bcerrar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Batras)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -315,7 +320,8 @@ public class ModificarCuidador extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Bmodificarcuidador)
                     .addComponent(Baceptarcuidador)
-                    .addComponent(Batrascuidador))
+                    .addComponent(Bcerrar)
+                    .addComponent(Batras))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -410,11 +416,11 @@ public class ModificarCuidador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JidcuidadorActionPerformed
 
-    private void BatrascuidadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrascuidadorActionPerformed
+    private void BcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarActionPerformed
         OpcionesModificar abrir = new OpcionesModificar();
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_BatrascuidadorActionPerformed
+    }//GEN-LAST:event_BcerrarActionPerformed
 
     private void BmodificarcuidadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BmodificarcuidadorActionPerformed
     // TODO add your handling code here:
@@ -506,7 +512,8 @@ public class ModificarCuidador extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Baceptarcuidador;
-    private javax.swing.JButton Batrascuidador;
+    private javax.swing.JButton Batras;
+    private javax.swing.JButton Bcerrar;
     private javax.swing.JButton Bmodificarcuidador;
     private javax.swing.JTextField Japellidoc1;
     private javax.swing.JTextField Japellidoc2;

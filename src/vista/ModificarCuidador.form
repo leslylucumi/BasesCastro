@@ -40,15 +40,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="Baceptarcuidador" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Component id="Bmodificarcuidador" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="Batrascuidador" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -119,6 +110,17 @@
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+              <Component id="Baceptarcuidador" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Component id="Bmodificarcuidador" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="Bcerrar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="Batras" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -199,7 +201,8 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="Bmodificarcuidador" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Baceptarcuidador" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Batrascuidador" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Bcerrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Batras" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -318,12 +321,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JidcuidadorActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Batrascuidador">
+    <Component class="javax.swing.JButton" name="Bcerrar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="text" type="java.lang.String" value="Cerrar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BatrascuidadorActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BcerrarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Bmodificarcuidador">
@@ -340,6 +343,11 @@
           <Font name="Tahoma" size="18" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="MODIFICAR CUIDADOR"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Batras">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Atras"/>
       </Properties>
     </Component>
   </SubComponents>

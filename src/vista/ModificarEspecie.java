@@ -20,6 +20,7 @@ public class ModificarEspecie extends javax.swing.JFrame {
     public ModificarEspecie() {
         initComponents();
         jNombre.setEnabled(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -35,10 +36,11 @@ public class ModificarEspecie extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jAceptar = new javax.swing.JButton();
         jModificar = new javax.swing.JButton();
-        jCancelar = new javax.swing.JButton();
+        Bcerrar = new javax.swing.JButton();
         jNombre = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jId = new javax.swing.JTextField();
+        Batras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,10 +63,10 @@ public class ModificarEspecie extends javax.swing.JFrame {
             }
         });
 
-        jCancelar.setText("Cancelar");
-        jCancelar.addActionListener(new java.awt.event.ActionListener() {
+        Bcerrar.setText("Cerrar");
+        Bcerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCancelarActionPerformed(evt);
+                BcerrarActionPerformed(evt);
             }
         });
 
@@ -79,6 +81,13 @@ public class ModificarEspecie extends javax.swing.JFrame {
         jId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jIdActionPerformed(evt);
+            }
+        });
+
+        Batras.setText("Atras");
+        Batras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BatrasActionPerformed(evt);
             }
         });
 
@@ -106,9 +115,11 @@ public class ModificarEspecie extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jModificar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCancelar))
+                        .addComponent(Bcerrar))
                     .addComponent(jLabel11))
-                .addGap(107, 107, 107))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Batras)
+                .addGap(28, 28, 28))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,7 +138,8 @@ public class ModificarEspecie extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jAceptar)
                     .addComponent(jModificar)
-                    .addComponent(jCancelar))
+                    .addComponent(Bcerrar)
+                    .addComponent(Batras))
                 .addContainerGap())
         );
 
@@ -182,11 +194,9 @@ public class ModificarEspecie extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jModificarActionPerformed
 
-    private void jCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCancelarActionPerformed
-        OpcionesModificar abrir = new OpcionesModificar();
-        abrir.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jCancelarActionPerformed
+    private void BcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BcerrarActionPerformed
 
     private void jNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNombreActionPerformed
         // TODO add your handling code here:
@@ -195,6 +205,12 @@ public class ModificarEspecie extends javax.swing.JFrame {
     private void jIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jIdActionPerformed
+
+    private void BatrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrasActionPerformed
+        OpcionesModificar abrir = new OpcionesModificar();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BatrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,8 +248,9 @@ public class ModificarEspecie extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Batras;
+    private javax.swing.JButton Bcerrar;
     private javax.swing.JButton jAceptar;
-    private javax.swing.JButton jCancelar;
     private javax.swing.JTextField jId;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;

@@ -16,6 +16,7 @@ public class InsertarCuidado extends javax.swing.JFrame {
      */
     public InsertarCuidado() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
