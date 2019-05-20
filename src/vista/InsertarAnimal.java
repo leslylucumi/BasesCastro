@@ -66,7 +66,7 @@ public class InsertarAnimal extends javax.swing.JFrame {
         jComboBox3 = new javax.swing.JComboBox();
         jComboBox1 = new javax.swing.JComboBox();
         jComboBox4 = new javax.swing.JComboBox();
-        Batrasanimal = new javax.swing.JButton();
+        Batras = new javax.swing.JButton();
         Jedad = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         rutaimgcara = new javax.swing.JTextField();
@@ -178,14 +178,14 @@ public class InsertarAnimal extends javax.swing.JFrame {
         getContentPane().add(jComboBox4);
         jComboBox4.setBounds(413, 188, 176, 20);
 
-        Batrasanimal.setText("Atras");
-        Batrasanimal.addActionListener(new java.awt.event.ActionListener() {
+        Batras.setText("Atras");
+        Batras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BatrasanimalActionPerformed(evt);
+                BatrasActionPerformed(evt);
             }
         });
-        getContentPane().add(Batrasanimal);
-        Batrasanimal.setBounds(330, 317, 59, 23);
+        getContentPane().add(Batras);
+        Batras.setBounds(330, 317, 59, 23);
         getContentPane().add(Jedad);
         Jedad.setBounds(116, 81, 111, 20);
 
@@ -323,11 +323,11 @@ public class InsertarAnimal extends javax.swing.JFrame {
         // System.out.println("iten seleccionado "+jComboBox1.getSelectedItem());
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void BatrasanimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrasanimalActionPerformed
-        OpcionesModificar abrir = new OpcionesModificar();
+    private void BatrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrasActionPerformed
+        OpcionesInsertar abrir = new OpcionesInsertar();
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_BatrasanimalActionPerformed
+    }//GEN-LAST:event_BatrasActionPerformed
 
     private void rutaimgcaraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rutaimgcaraActionPerformed
         // TODO add your handling code here:
@@ -432,7 +432,7 @@ public class InsertarAnimal extends javax.swing.JFrame {
     private javax.swing.JButton Babririmgcuerpo;
     private javax.swing.JButton Babririmgopcional;
     private javax.swing.JButton Bagregaranimal;
-    private javax.swing.JButton Batrasanimal;
+    private javax.swing.JButton Batras;
     private javax.swing.JButton Bcerraranimal;
     private javax.swing.JButton Blimpiaranimal;
     private javax.swing.JTextField Jdescripa;

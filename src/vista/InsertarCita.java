@@ -19,6 +19,7 @@ public class InsertarCita extends javax.swing.JFrame {
      */
     public InsertarCita() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -35,9 +36,10 @@ public class InsertarCita extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jidanimal = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        Bagregar = new javax.swing.JButton();
+        Blimpiar = new javax.swing.JButton();
+        Batras = new javax.swing.JButton();
+        Bcerrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,16 +50,33 @@ public class InsertarCita extends javax.swing.JFrame {
 
         jLabel4.setText("Id animal");
 
-        jButton1.setText("Agregar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Bagregar.setText("Agregar");
+        Bagregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BagregarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Limpiar");
+        Blimpiar.setText("Limpiar");
+        Blimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BlimpiarActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Atrás");
+        Batras.setText("Atrás");
+        Batras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BatrasActionPerformed(evt);
+            }
+        });
+
+        Bcerrar.setText("Cerrar");
+        Bcerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BcerrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,23 +87,25 @@ public class InsertarCita extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(152, 152, 152))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(46, 46, 46)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Jidveterinario, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-                            .addComponent(jidanimal)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jButton1)
-                        .addGap(54, 54, 54)
-                        .addComponent(jButton2)
-                        .addGap(57, 57, 57)
-                        .addComponent(jButton3)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Bcerrar)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel4))
+                            .addGap(46, 46, 46)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(Jidveterinario, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                                .addComponent(jidanimal)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(40, 40, 40)
+                            .addComponent(Bagregar)
+                            .addGap(54, 54, 54)
+                            .addComponent(Blimpiar)
+                            .addGap(57, 57, 57)
+                            .addComponent(Batras))))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -100,18 +121,20 @@ public class InsertarCita extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jidanimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addComponent(Bcerrar)
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(Bagregar)
+                    .addComponent(Blimpiar)
+                    .addComponent(Batras))
                 .addGap(32, 32, 32))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BagregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BagregarActionPerformed
         int id_animal_veterinario;
         int id_veterinario_animal;
         id_animal_veterinario = Integer.parseInt(Jidveterinario.getText());
@@ -128,7 +151,21 @@ public class InsertarCita extends javax.swing.JFrame {
             System.out.println("No se inserto el Cita");
         }
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BagregarActionPerformed
+
+    private void BcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BcerrarActionPerformed
+
+    private void BatrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrasActionPerformed
+        OpcionesInsertar abrir = new OpcionesInsertar();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BatrasActionPerformed
+
+    private void BlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlimpiarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BlimpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,10 +203,11 @@ public class InsertarCita extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Bagregar;
+    private javax.swing.JButton Batras;
+    private javax.swing.JButton Bcerrar;
+    private javax.swing.JButton Blimpiar;
     private javax.swing.JTextField Jidveterinario;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

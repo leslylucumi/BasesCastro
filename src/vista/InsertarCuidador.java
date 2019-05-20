@@ -153,7 +153,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
 
-        Bagregarcuidador.setText("Insertar");
+        Bagregarcuidador.setText("Agregar");
         Bagregarcuidador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BagregarcuidadorActionPerformed(evt);
@@ -399,7 +399,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
     }//GEN-LAST:event_JidcuidadorActionPerformed
 
     private void BatrascuidadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrascuidadorActionPerformed
-        OpcionesModificar abrir = new OpcionesModificar();
+        OpcionesInsertar abrir = new OpcionesInsertar();
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_BatrascuidadorActionPerformed
