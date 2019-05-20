@@ -16,6 +16,7 @@ public class OpcionesInsertar extends javax.swing.JFrame {
      */
     public OpcionesInsertar() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -27,21 +28,143 @@ public class OpcionesInsertar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        Banimal = new javax.swing.JButton();
+        Bcita = new javax.swing.JButton();
+        Bcuidador = new javax.swing.JButton();
+        Bveterinario = new javax.swing.JButton();
+        Bcuidado = new javax.swing.JButton();
+        Batras = new javax.swing.JButton();
+        Bcerrar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("OPCIONES INSERTAR");
+
+        Banimal.setText("Animal");
+        Banimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BanimalActionPerformed(evt);
+            }
+        });
+
+        Bcita.setText("Cita");
+        Bcita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BcitaActionPerformed(evt);
+            }
+        });
+
+        Bcuidador.setText("Cuidador");
+        Bcuidador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BcuidadorActionPerformed(evt);
+            }
+        });
+
+        Bveterinario.setText("Veterinario");
+        Bveterinario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BveterinarioActionPerformed(evt);
+            }
+        });
+
+        Bcuidado.setText("Cuidado");
+        Bcuidado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BcuidadoActionPerformed(evt);
+            }
+        });
+
+        Batras.setText("Atras");
+
+        Bcerrar.setText("Cerrar");
+        Bcerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BcerrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Bveterinario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Banimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Bcita, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Bcuidado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Bcuidador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Batras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                .addComponent(Bcerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(92, 92, 92))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(Banimal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Bcita)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Bcuidado)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Bcuidador)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Bveterinario)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Batras)
+                    .addComponent(Bcerrar))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BanimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BanimalActionPerformed
+        InsertarAnimal abrir = new InsertarAnimal();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BanimalActionPerformed
+
+    private void BcitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcitaActionPerformed
+        InsertarCita abrir = new InsertarCita();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BcitaActionPerformed
+
+    private void BcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BcerrarActionPerformed
+
+    private void BcuidadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcuidadoActionPerformed
+        InsertarCuidado abrir = new InsertarCuidado();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BcuidadoActionPerformed
+
+    private void BcuidadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcuidadorActionPerformed
+        InsertarCuidador abrir = new InsertarCuidador();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BcuidadorActionPerformed
+
+    private void BveterinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BveterinarioActionPerformed
+        InsertarVeterinario abrir = new InsertarVeterinario();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BveterinarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +202,13 @@ public class OpcionesInsertar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Banimal;
+    private javax.swing.JButton Batras;
+    private javax.swing.JButton Bcerrar;
+    private javax.swing.JButton Bcita;
+    private javax.swing.JButton Bcuidado;
+    private javax.swing.JButton Bcuidador;
+    private javax.swing.JButton Bveterinario;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
