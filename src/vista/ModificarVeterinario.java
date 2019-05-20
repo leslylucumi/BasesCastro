@@ -57,7 +57,7 @@ public class ModificarVeterinario extends javax.swing.JFrame {
         jApellido1 = new javax.swing.JTextField();
         jApellido2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        Cancelar = new javax.swing.JButton();
+        Bcerrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jidveterinario = new javax.swing.JTextField();
@@ -66,6 +66,7 @@ public class ModificarVeterinario extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jEdad = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
+        Batras = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -136,14 +137,14 @@ public class ModificarVeterinario extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(67, 271, 71, 23);
 
-        Cancelar.setText("Cancelar");
-        Cancelar.addActionListener(new java.awt.event.ActionListener() {
+        Bcerrar.setText("Cerrar");
+        Bcerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CancelarActionPerformed(evt);
+                BcerrarActionPerformed(evt);
             }
         });
-        getContentPane().add(Cancelar);
-        Cancelar.setBounds(225, 271, 75, 23);
+        getContentPane().add(Bcerrar);
+        Bcerrar.setBounds(225, 271, 63, 23);
 
         jLabel1.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         jLabel1.setText("Modificar Veterinario");
@@ -190,6 +191,15 @@ public class ModificarVeterinario extends javax.swing.JFrame {
         jLabel11.setText("Correo");
         getContentPane().add(jLabel11);
         jLabel11.setBounds(216, 55, 34, 17);
+
+        Batras.setText("Atras");
+        Batras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BatrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Batras);
+        Batras.setBounds(290, 220, 59, 23);
         getContentPane().add(jLabel13);
         jLabel13.setBounds(0, 0, 410, 300);
 
@@ -283,11 +293,9 @@ public class ModificarVeterinario extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
-        OpcionesModificar abrir = new OpcionesModificar();
-        abrir.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_CancelarActionPerformed
+    private void BcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BcerrarActionPerformed
 
     private void jidveterinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jidveterinarioActionPerformed
         // TODO add your handling code here:
@@ -300,6 +308,12 @@ public class ModificarVeterinario extends javax.swing.JFrame {
     private void jNombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNombre2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jNombre2ActionPerformed
+
+    private void BatrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrasActionPerformed
+        OpcionesModificar abrir = new OpcionesModificar();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BatrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -337,7 +351,8 @@ public class ModificarVeterinario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Cancelar;
+    private javax.swing.JButton Batras;
+    private javax.swing.JButton Bcerrar;
     private javax.swing.JTextField jApellido1;
     private javax.swing.JTextField jApellido2;
     private javax.swing.JButton jButton1;

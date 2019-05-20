@@ -21,6 +21,7 @@ public class ModificarHabitat extends javax.swing.JFrame {
         initComponents();
          jZona.setEnabled(false);
          jDescripcion.setEnabled(false);
+         this.setLocationRelativeTo(null);
     }
 
     /**
@@ -37,11 +38,12 @@ public class ModificarHabitat extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jAceptar = new javax.swing.JButton();
         jModificar = new javax.swing.JButton();
-        jCancelar = new javax.swing.JButton();
+        Bcerrar = new javax.swing.JButton();
         jZona = new javax.swing.JTextField();
         jDescripcion = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jId = new javax.swing.JTextField();
+        Batras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,10 +68,10 @@ public class ModificarHabitat extends javax.swing.JFrame {
             }
         });
 
-        jCancelar.setText("Cancelar");
-        jCancelar.addActionListener(new java.awt.event.ActionListener() {
+        Bcerrar.setText("Cerrar");
+        Bcerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCancelarActionPerformed(evt);
+                BcerrarActionPerformed(evt);
             }
         });
 
@@ -93,6 +95,13 @@ public class ModificarHabitat extends javax.swing.JFrame {
             }
         });
 
+        Batras.setText("Atras");
+        Batras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BatrasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -109,7 +118,9 @@ public class ModificarHabitat extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jModificar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCancelar))
+                        .addComponent(Bcerrar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Batras))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -125,7 +136,7 @@ public class ModificarHabitat extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jZona, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,7 +159,8 @@ public class ModificarHabitat extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jAceptar)
                     .addComponent(jModificar)
-                    .addComponent(jCancelar))
+                    .addComponent(Bcerrar)
+                    .addComponent(Batras))
                 .addGap(22, 22, 22))
         );
 
@@ -225,11 +237,15 @@ public class ModificarHabitat extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jModificarActionPerformed
 
-    private void jCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCancelarActionPerformed
+    private void BcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BcerrarActionPerformed
+
+    private void BatrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrasActionPerformed
         OpcionesModificar abrir = new OpcionesModificar();
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jCancelarActionPerformed
+    }//GEN-LAST:event_BatrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,8 +283,9 @@ public class ModificarHabitat extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Batras;
+    private javax.swing.JButton Bcerrar;
     private javax.swing.JButton jAceptar;
-    private javax.swing.JButton jCancelar;
     private javax.swing.JTextField jDescripcion;
     private javax.swing.JTextField jId;
     private javax.swing.JLabel jLabel1;

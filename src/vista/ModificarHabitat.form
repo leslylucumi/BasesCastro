@@ -36,7 +36,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jModificar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jCancelar" min="-2" max="-2" attributes="0"/>
+                      <Component id="Bcerrar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Batras" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -60,7 +62,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="98" max="32767" attributes="0"/>
+              <EmptySpace pref="41" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -88,7 +90,8 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jModificar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Bcerrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Batras" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
           </Group>
@@ -130,12 +133,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jModificarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jCancelar">
+    <Component class="javax.swing.JButton" name="Bcerrar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="text" type="java.lang.String" value="Cerrar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCancelarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BcerrarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jZona">
@@ -156,6 +159,14 @@
     <Component class="javax.swing.JTextField" name="jId">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jIdActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Batras">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Atras"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BatrasActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
