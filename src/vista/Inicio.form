@@ -43,9 +43,9 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                      <Component id="Baceptarinicio" min="-2" max="-2" attributes="0"/>
+                      <Component id="Baceptar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                      <Component id="Bcerrarinicio" min="-2" pref="71" max="-2" attributes="0"/>
+                      <Component id="Bcerrar" min="-2" pref="71" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="108" max="32767" attributes="0"/>
@@ -69,8 +69,8 @@
               </Group>
               <EmptySpace pref="40" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Baceptarinicio" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Bcerrarinicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Baceptar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Bcerrar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
           </Group>
@@ -96,20 +96,20 @@
         <Property name="text" type="java.lang.String" value="Contrase&#xf1;a"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Baceptarinicio">
+    <Component class="javax.swing.JButton" name="Baceptar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Aceptar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BaceptarinicioActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BaceptarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Bcerrarinicio">
+    <Component class="javax.swing.JButton" name="Bcerrar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cerrar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BcerrarinicioActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BcerrarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="Tusuario">

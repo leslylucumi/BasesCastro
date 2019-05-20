@@ -411,7 +411,7 @@ public class ModificarCuidador extends javax.swing.JFrame {
     }//GEN-LAST:event_JidcuidadorActionPerformed
 
     private void BatrascuidadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrascuidadorActionPerformed
-        Menu abrir = new Menu();
+        OpcionesModificar abrir = new OpcionesModificar();
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_BatrascuidadorActionPerformed

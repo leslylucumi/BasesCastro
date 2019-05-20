@@ -183,7 +183,7 @@ public class ModificarEspecie extends javax.swing.JFrame {
     }//GEN-LAST:event_jModificarActionPerformed
 
     private void jCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCancelarActionPerformed
-        Menu abrir = new Menu();
+        OpcionesModificar abrir = new OpcionesModificar();
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jCancelarActionPerformed

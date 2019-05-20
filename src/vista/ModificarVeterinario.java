@@ -284,7 +284,7 @@ public class ModificarVeterinario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
-        Menu abrir = new Menu();
+        OpcionesModificar abrir = new OpcionesModificar();
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_CancelarActionPerformed
