@@ -51,11 +51,13 @@ public class ControlAnimal {
                 rs = stat.executeQuery(sql);
                 while (rs.next()) {
                 
-                    obja = new Animal (rs.getInt(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6),
+                    obja = new Animal (rs.getInt(2), rs.getBlob(3).toString(), rs.getString(4), rs.getString(5), rs.getString(6),
                             rs.getString(7), rs.getString(8), rs.getDouble(9), rs.getInt(10),rs.getInt(11),rs.getInt(12));
 
                     System.out.println(rs.getString(2));
                     
+                    System.out.println(rs.getBlob(3));
+                    System.out.println(rs.getBlob(3).toString());
                     a = rs.getString(3);
                 }
                 

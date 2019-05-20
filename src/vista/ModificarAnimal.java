@@ -9,10 +9,21 @@ import control.ControlAlimentacion;
 import control.ControlAnimal;
 import control.ControlEspecie;
 import control.ControlHabitat;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.sql.Blob;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.LinkedList;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.plaf.IconUIResource;
 import modelo.Alimentacion;
 import modelo.Animal;
+import modelo.ConnectBD;
 import modelo.Especie;
 import modelo.Habitat;
 
@@ -36,9 +47,9 @@ public class ModificarAnimal extends javax.swing.JFrame {
     public ModificarAnimal() {
         initComponents();
         Jedad.setEnabled(false);
-        JimgcaSSSSS.setEnabled(false);
-        Jimgcua.setEnabled(false);
-        Jimga.setEnabled(false);
+//        JimgcaSSSSS.setEnabled(false);
+//        Jimgcua.setEnabled(false);
+//        Jimga.setEnabled(false);
         Jgeneroa.setEnabled(false);
         Jdescripa.setEnabled(false);
         Jnombre.setEnabled(false);
@@ -49,8 +60,9 @@ public class ModificarAnimal extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
 
     }
+
     //holaX2
- //HOLAAAAAAAAQUEMAS
+    //HOLAAAAAAAAQUEMAS
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -89,6 +101,8 @@ public class ModificarAnimal extends javax.swing.JFrame {
         jImg1 = new javax.swing.JLabel();
         jimg3 = new javax.swing.JLabel();
         jimg2 = new javax.swing.JLabel();
+        canvas1 = new java.awt.Canvas();
+        canvas2 = new java.awt.Canvas();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -177,58 +191,69 @@ public class ModificarAnimal extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addContainerGap(671, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1)
                             .addComponent(jLabel12))
-                        .addGap(52, 52, 52)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Jid, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                            .addComponent(Jedad, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                            .addComponent(jImg1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jimg2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel4))
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(Jdescripa, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Jgeneroa, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Jnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Jpesoa, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jimg3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(52, 52, 52)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(Jid, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                                    .addComponent(Jedad, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                                    .addComponent(jImg1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jimg2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10)
-                                    .addComponent(jLabel11))
-                                .addGap(23, 23, 23)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel4)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(canvas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel7)))
+                                .addGap(22, 22, 22)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBoxEspecia, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JcomboboxHabitat, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(Jdescripa, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Jgeneroa, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Jnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Jpesoa, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jimg3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel10)
+                                            .addComponent(jLabel11))
+                                        .addGap(23, 23, 23)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jComboBoxEspecia, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(JcomboboxHabitat, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Baceptaranimal)
+                                            .addComponent(Batrasanimal))
+                                        .addGap(53, 53, 53)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Bcerraranimal)
+                                            .addComponent(Blimpiaranimal)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(Bmodificaranimal1)
+                                        .addGap(124, 124, 124)))
+                                .addGap(46, 46, 46))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Baceptaranimal)
-                                    .addComponent(Batrasanimal))
-                                .addGap(53, 53, 53)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Bcerraranimal)
-                                    .addComponent(Blimpiaranimal)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(Bmodificaranimal1)
-                                .addGap(124, 124, 124)))
-                        .addGap(46, 46, 46))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addContainerGap(671, Short.MAX_VALUE))))
+                                .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,7 +280,7 @@ public class ModificarAnimal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Bmodificaranimal1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -268,6 +293,25 @@ public class ModificarAnimal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(canvas1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Jid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(Jedad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(jImg1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jimg2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
@@ -286,24 +330,10 @@ public class ModificarAnimal extends javax.swing.JFrame {
                             .addComponent(Jpesoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8))
                         .addGap(18, 18, 18)
-                        .addComponent(jimg3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Jid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(Jedad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(jImg1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addComponent(jimg2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jimg3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(canvas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(73, 73, 73))))
         );
 
         pack();
@@ -324,13 +354,48 @@ public class ModificarAnimal extends javax.swing.JFrame {
 //            ControlHabitat objh = new ControlHabitat();
             id_animal = Integer.parseInt(Jid.getText());
             Animal objan = obja.ModificarAnimal(id_animal);
+            String a = objan.getImganimal();
             Jedad.setText(objan.getEdad() + "");
-            Jimgca.setText(objan.getImganimalcara());
-            byte[] byteData = a.getBytes("UTF-8");
-            Blob blobData = objCon.getConexion().createBlob();
-            blobData.setBytes(1,byteData);
-            Jimgcua.setText(objan.getImganimalcuerpo());
-            Jimga.setText(objan.getImganimal());
+
+            ConnectBD objCon = new ConnectBD();
+            String sql = "select * from animales where id_animal=" + id_animal + "";
+            ResultSet rs = null;
+
+            if (objCon.crearConexion()) {
+
+                try {
+                    Statement stat = objCon.getConexion().createStatement();
+                    rs = stat.executeQuery(sql);
+                    while (rs.next()) {
+                        byte byteimage[] = null;
+                        Blob blob = rs.getBlob(3);
+                        byteimage = blob.getBytes(1, (int) blob.length());
+
+                        ImageIcon imge = new ImageIcon(byteimage);
+                        jImg1.setIcon(imge);
+
+                    }
+
+                } catch (Exception e) {
+
+                    System.out.println(e.toString());
+                }
+            }
+//            byte[] byteData = a.getBytes("UTF-8");
+//            ConnectBD objCon = new ConnectBD();
+//            if (objCon.crearConexion()) {
+//                Blob blobData = objCon.getConexion().createBlob();
+//                blobData.setBytes(1, byteData);
+//
+//                InputStream in = blobData.getBinaryStream();
+//                BufferedImage image = ImageIO.read(in);
+//               // jImg1.set((Icon) image);
+//                
+//          //      jImg1.setIcon(new javax.swing.ImageIcon((image)));
+//            }
+
+//            Jimgcua.setText(objan.getImganimalcuerpo());
+//            Jimga.setText(objan.getImganimal());
             Jgeneroa.setText(objan.getGenero());
             Jdescripa.setText(objan.getDescripcion());
             Jnombre.setText(objan.getNombre());
@@ -340,9 +405,7 @@ public class ModificarAnimal extends javax.swing.JFrame {
             int id_Especie = 0;
             int id_Habitat = 0;
 
-             
-           jComboBoxEspecia.addItem(objan.getId_Especie());
-            
+            jComboBoxEspecia.addItem(objan.getId_Especie());
 
             ControlEspecie objce = new ControlEspecie();
             le = objce.consultarEspecies();
@@ -365,9 +428,9 @@ public class ModificarAnimal extends javax.swing.JFrame {
 //            }
 
             Jedad.setEnabled(true);
-            Jimgca.setEnabled(true);
-            Jimgcua.setEnabled(true);
-            Jimga.setEnabled(true);
+//            Jimgca.setEnabled(true);
+//            Jimgcua.setEnabled(true);
+//            Jimga.setEnabled(true);
             Jgeneroa.setEnabled(true);
             Jdescripa.setEnabled(true);
             Jnombre.setEnabled(true);
@@ -414,14 +477,13 @@ public class ModificarAnimal extends javax.swing.JFrame {
         int id_habitat_animal = 0;
         int id_clasif_animal = 0;
 
-        if (Jimga.getText() != "") {
-            img_animal = Jimga.getText();
-        }
-
+//        if (Jimga.getText() != "") {
+//            img_animal = Jimga.getText();
+//        }
         edad = Integer.parseInt(Jedad.getText());
-        img_animalcara = Jimgca.getText();
-        img_animalcuerpo = Jimgcua.getText();
-        img_animal = Jimga.getText();
+//        img_animalcara = Jimgca.getText();
+//        img_animalcuerpo = Jimgcua.getText();
+//        img_animal = Jimga.getText();
         genero = Jgeneroa.getText();
         descripcion = Jdescripa.getText();
         nombre = Jnombre.getText();
@@ -490,9 +552,8 @@ public class ModificarAnimal extends javax.swing.JFrame {
             jComboBox3.addItem(lA.get(i).getNombreA());
 
         }
-   
 
-        
+
     }//GEN-LAST:event_formWindowOpened
 
     private void JcomboboxHabitatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JcomboboxHabitatActionPerformed
@@ -548,6 +609,8 @@ public class ModificarAnimal extends javax.swing.JFrame {
     private javax.swing.JTextField Jid;
     private javax.swing.JTextField Jnombre;
     private javax.swing.JTextField Jpesoa;
+    private java.awt.Canvas canvas1;
+    private java.awt.Canvas canvas2;
     private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBoxEspecia;
     private javax.swing.JLabel jImg1;
