@@ -47,9 +47,37 @@ public class ControlCuidador {
                 System.out.println(e.toString());
             }
         }
+       
 
         return objc;
 
+      }
+      
+      public Cuidador Consultarcuidadores(){
+          ConnectBD objCon = new ConnectBD();
+          String sql = "select * from cuidadores ";
+        ResultSet rs = null;
+        Cuidador objc = null;
+       if (objCon.crearConexion()) {
+            try {
+                Statement stat = objCon.getConexion().createStatement();
+                rs = stat.executeQuery(sql);
+                while (rs.next()) {
+                    objc = new Cuidador (rs.getInt(1),rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6),
+                            rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10));
+
+                    System.out.println(rs.getString(2));
+                }
+                objCon.getConexion().close();
+            } catch (Exception e) {
+
+                System.out.println(e.toString());
+            }
+        }
+       
+
+        return objc;
+      
       }
       
       public boolean ModificarCuidadores(Cuidador objc, int id_cuidador) {

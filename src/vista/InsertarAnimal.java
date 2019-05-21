@@ -311,7 +311,7 @@ public class InsertarAnimal extends javax.swing.JFrame {
 
         ControlAnimal objca = new ControlAnimal();
         Animal obje = new Animal(id_animal, edad, imganimalcara, imganimalcuerpo, imganimal, genero, descripcion, nombre, peso, id_Especie, id_Habitat, id_Alimentacion);
-        boolean f = objca.insertarAnimal(obje);
+    boolean f = objca.insertarAnimal(obje);
 
         if (f) {
 

@@ -59,47 +59,48 @@ public class InsertarVeterinario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(150, 150, 150));
+        setPreferredSize(new java.awt.Dimension(633, 378));
         getContentPane().setLayout(null);
 
         jLabel1.setText("Primer nombre");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 180, 69, 20);
+        jLabel1.setBounds(10, 180, 100, 20);
 
         jLabel2.setText("Segundo nombre");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(10, 210, 81, 14);
+        jLabel2.setBounds(10, 210, 100, 14);
 
         jLabel3.setText("Primer apellido");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 240, 69, 20);
+        jLabel3.setBounds(10, 240, 100, 20);
 
         jLabel4.setText("Segundo apellido");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 270, 81, 14);
+        jLabel4.setBounds(10, 270, 100, 14);
 
         jLabel6.setText("Edad");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(220, 150, 24, 14);
+        jLabel6.setBounds(220, 150, 50, 14);
         jLabel6.getAccessibleContext().setAccessibleName("jLabel6");
 
         jLabel7.setText("Correo");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(220, 180, 33, 14);
+        jLabel7.setBounds(220, 180, 50, 14);
         jLabel7.getAccessibleContext().setAccessibleName("jLabel7");
 
         jLabel8.setText("Teléfono 1");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(210, 210, 51, 14);
+        jLabel8.setBounds(210, 210, 60, 14);
         jLabel8.getAccessibleContext().setAccessibleName("jLabel8");
 
         jLabel9.setText("Teléfono 2");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(210, 240, 51, 14);
+        jLabel9.setBounds(210, 240, 60, 14);
         jLabel9.getAccessibleContext().setAccessibleName("jLabel9");
 
         jLabel10.setText("Dirección");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(210, 270, 43, 14);
+        jLabel10.setBounds(210, 270, 60, 14);
         jLabel10.getAccessibleContext().setAccessibleName("jLabel10");
 
         jt_nom1veterinario.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +119,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Bagregarveterinario);
-        Bagregarveterinario.setBounds(40, 300, 71, 23);
+        Bagregarveterinario.setBounds(40, 300, 71, 30);
         Bagregarveterinario.getAccessibleContext().setAccessibleName("agregar");
 
         Blimpiarveterinario.setText("Limpiar");
@@ -128,7 +129,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Blimpiarveterinario);
-        Blimpiarveterinario.setBounds(130, 300, 65, 23);
+        Blimpiarveterinario.setBounds(130, 300, 70, 30);
         Blimpiarveterinario.getAccessibleContext().setAccessibleName("limpiar");
 
         jt_nom2veterinario.addActionListener(new java.awt.event.ActionListener() {
@@ -197,7 +198,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
 
         jLabel5.setText("Identificación");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 150, 64, 20);
+        jLabel5.setBounds(10, 150, 100, 20);
 
         Jidveterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,7 +215,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Batrasveterinario);
-        Batrasveterinario.setBounds(220, 300, 59, 23);
+        Batrasveterinario.setBounds(220, 300, 70, 30);
 
         Bcerrarveterinario.setText("Cerrar");
         Bcerrarveterinario.addActionListener(new java.awt.event.ActionListener() {
@@ -227,7 +228,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar Veterinario-02.jpg"))); // NOI18N
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(-40, 0, 700, 380);
+        jLabel12.setBounds(-40, 0, 670, 380);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

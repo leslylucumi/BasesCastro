@@ -442,11 +442,21 @@ public class ModificarAnimal extends javax.swing.JFrame {
                     rs = stat.executeQuery(sql);
                     while (rs.next()) {
                         byte byteimage[] = null;
+                        byte byteimage1[] = null;
+                        byte byteimage2[] = null;
                         Blob blob = rs.getBlob(3);
+                        Blob blobe = rs.getBlob(4);
+                        Blob blobs = rs.getBlob(5);
                         byteimage = blob.getBytes(1, (int) blob.length());
-
+                        byteimage1 = blobe.getBytes(1, (int) blobe.length());
+                        byteimage2 = blobs.getBytes(1, (int) blobs.length());
                         ImageIcon imge = new ImageIcon(byteimage);
+                        ImageIcon imge1 = new ImageIcon(byteimage1);
+                        ImageIcon imge2 = new ImageIcon(byteimage2);
+
                         jImg1.setIcon(imge);
+                        jimg2.setIcon(imge1);
+                        jimg3.setIcon(imge2);
 
                     }
 
@@ -482,33 +492,33 @@ public class ModificarAnimal extends javax.swing.JFrame {
             int id_Especie = 0;
             int id_Habitat = 0;
 
-            int temporalespecie=objan.getId_Especie();
+            int temporalespecie = objan.getId_Especie();
             for (int i = 0; i < le.size(); i++) {
-                if (temporalespecie==le.get(i).getId()){
+                if (temporalespecie == le.get(i).getId()) {
                     String nombre = le.get(i).getNombreE();
-                jComboBoxEspecia.setSelectedItem(nombre);
-                break;
+                    jComboBoxEspecia.setSelectedItem(nombre);
+                    break;
+                }
             }
-            }
-            
-         int temporalalimentacion=objan.getId_Alimentacion();
-        for (int i = 0; i < lA.size(); i++) {
-                if (temporalalimentacion==lA.get(i).getId()){
+
+            int temporalalimentacion = objan.getId_Alimentacion();
+            for (int i = 0; i < lA.size(); i++) {
+                if (temporalalimentacion == lA.get(i).getId()) {
                     String nombre = lA.get(i).getNombreA();
-                jComboBox3.setSelectedItem(nombre);
-                
-                break;
+                    jComboBox3.setSelectedItem(nombre);
+
+                    break;
+                }
             }
-            }
-        ////
-                 int temporalhabitat=objan.getId_Habitat();
-        for (int i = 0; i < lh.size(); i++) {
-                if (temporalhabitat==lh.get(i).getId()){
+            ////
+            int temporalhabitat = objan.getId_Habitat();
+            for (int i = 0; i < lh.size(); i++) {
+                if (temporalhabitat == lh.get(i).getId()) {
                     String nombre = lh.get(i).getNombreH();
-                JcomboboxHabitat.setSelectedItem(nombre);
-                
-                break;
-            }
+                    JcomboboxHabitat.setSelectedItem(nombre);
+
+                    break;
+                }
             }
 
             Jedad.setEnabled(true);
@@ -560,7 +570,7 @@ public class ModificarAnimal extends javax.swing.JFrame {
         int id_especie_animal = 0;
         int id_habitat_animal = 0;
         int id_clasif_animal = 0;
-        
+
         img_animalcara = Truta1.getText();
         img_animalcuerpo = Truta2.getText();
         img_animal = Truta3.getText();
