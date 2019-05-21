@@ -7,6 +7,7 @@ package modelo;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -218,27 +219,72 @@ public class Animal {
         return t;
 
     }
-    public boolean modificarAnimal(String sql) {
+    public boolean modificarAnimal(Animal obja,String sql) throws FileNotFoundException {
         ConnectBD objCon = new ConnectBD();
+         
+        FileInputStream fis1 = null;
+        FileInputStream fis2 = null;
+        FileInputStream fis3 = null;
+        PreparedStatement ps = null;
         boolean a = false;
         
-       if (objCon.crearConexion()) {
+       
        try {
-           Statement stat;
-           stat = objCon.getConexion().createStatement();
-           stat.executeUpdate(sql);
+           if (objCon.crearConexion()) {
+               objCon.getConexion().setAutoCommit(false);
+                File file1 = new File(obja.getImganimalcara());
+                File file2 = new File(obja.getImganimalcuerpo());
+                File file3 = new File(obja.getImganimal());
+                System.out.println("nn "+file1.getPath());
+                //ojo con esta parte
+                fis1 = new FileInputStream(file1);
+                fis2 = new FileInputStream(file2);
+                fis3 = new FileInputStream(file3);
+                
+                ps = objCon.getConexion().prepareStatement(sql);
+                //ps.setInt(1, obja.getId());
+                ps.setInt(2, obja.getEdad());
+                ps.setBinaryStream(3, fis1, (int) file1.length());
+                ps.setBinaryStream(4, fis2, (int) file2.length());
+                ps.setBinaryStream(5, fis3, (int) file3.length());
+                ps.setString(6, obja.getGenero());
+                ps.setString(7, obja.getDescripcion());
+                ps.setString(8, obja.getNombre());
+                ps.setDouble(9, obja.getPeso());
+                ps.setInt(10, obja.getId_Especie());
+                ps.setInt(11, obja.getId_Habitat());
+                ps.setInt(12, obja.getId_Alimentacion());
+               
+//           Statement stat;
+//           stat = objCon.getConexion().createStatement();
+//           stat.executeUpdate(sql);}
+                ps.executeUpdate();
+                objCon.getConexion().commit();
+                
            a=true;
+           }
        } catch (SQLException ex) {
-           ex.printStackTrace();
-           System.out.println(ex.toString());
-           return false;
+         a = false;
+            System.out.println("Error " + ex.toString());
        }
-         
+       finally {
+            try {
+                ps.close();
+                fis1.close();
+                fis2.close();
+                fis3.close();
+            } catch (Exception ex) {
+                a = false;
+                System.out.println("Errro " + ex.toString());
+            }
+        }
+       
+      return a;   
     }  
-       return a;
+       
     
     
     
     } 
 
-}
+

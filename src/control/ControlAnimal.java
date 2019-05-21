@@ -86,12 +86,10 @@ public class ControlAnimal {
                 img_animal = null;
             }
 
-            String sql = "update animales set edad =" + obja.getEdad() + ", img_animalcara =" + obja.getImganimalcara() + ", img_animalcuerpo =" + obja.getImganimalcuerpo() + ","
-                    + "img_animal = " + obja.getImganimal() + " ,genero =" + obja.getGenero() + " ,descripcion =" + obja.getDescripcion() + " ,nombre =" + obja.getNombre() + ", "
-                    + "peso =" + obja.getPeso() + " ,id_especie_animal =" + obja.getId_Especie() + " ,id_habitat_animal =" + obja.getId_Habitat() + " ,id_clasif_animal =" + obja.getId_Alimentacion()
+            String sql = "update animales set edad = ?, img_animalcara = ?,  img_animalcuerpo =?, img_animal = ?,genero = ? ,descripcion = ? ,nombre = ? ,peso =  ?  ,id_especie_animal = ? ,id_habitat_animal = ?,id_clasif_animal = ?"
                     + " where id_animal=" + id_animal;
 
-            c = obja.modificarAnimal(sql);
+            c = obja.modificarAnimal(obja,sql);
 
         } catch (Exception e) {
 
