@@ -36,6 +36,8 @@ public class Inicio extends javax.swing.JFrame {
         Tcontrasena = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(414, 216));
+        setPreferredSize(new java.awt.Dimension(414, 216));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("INICIO");

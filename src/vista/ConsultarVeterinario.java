@@ -5,14 +5,18 @@
  */
 package vista;
 
+import control.ControlVeterinario;
+import java.util.LinkedList;
+import modelo.Veterinario;
+
 /**
  *
- * @author LeslyLC
+ * @author Ángela
  */
 public class ConsultarVeterinario extends javax.swing.JFrame {
 
     /**
-     * Creates new form ConsultarVeterinario
+     * Creates new form ConsultarVterinario
      */
     public ConsultarVeterinario() {
         initComponents();
@@ -27,21 +31,83 @@ public class ConsultarVeterinario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(754, 164));
+        setPreferredSize(new java.awt.Dimension(754, 164));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Nombre 1", "Nombre 2", "Apellido 1", "Apellido 2", "Edad", "Correo", "Telefono 1", "Telefono 1", "Direccion"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+         ControlVeterinario objc = new ControlVeterinario();
+        LinkedList<Veterinario> LVeterinario=objc.ConsultarVeterinarios();
+ 
+        for (int i = 0; i < LVeterinario.size(); i++) {
+            jTable1.setValueAt(LVeterinario.get(i).getId_veterinario(), i, 0);
+            jTable1.setValueAt(LVeterinario.get(i).getNombrev1(), i, 1);
+            jTable1.setValueAt(LVeterinario.get(i).getNombrev2(), i, 2);
+            jTable1.setValueAt(LVeterinario.get(i).getApellidov1(), i, 3);
+            jTable1.setValueAt(LVeterinario.get(i).getApellidov2(), i, 4);
+            jTable1.setValueAt(LVeterinario.get(i).getEdadv(), i, 5);
+            jTable1.setValueAt(LVeterinario.get(i).getCorreov(), i, 6);
+            jTable1.setValueAt(LVeterinario.get(i).getTelv1(), i, 7);
+            jTable1.setValueAt(LVeterinario.get(i).getTelv2(), i, 8);
+            jTable1.setValueAt(LVeterinario.get(i).getDirv(), i, 9);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -69,6 +135,7 @@ public class ConsultarVeterinario extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ConsultarVeterinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -79,5 +146,8 @@ public class ConsultarVeterinario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
