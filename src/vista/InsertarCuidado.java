@@ -36,103 +36,76 @@ public class InsertarCuidado extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         Batras = new javax.swing.JButton();
         Bcerrar = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(530, 321));
+        setPreferredSize(new java.awt.Dimension(530, 325));
+        getContentPane().setLayout(null);
+        getContentPane().add(Jid_animal_cuidador);
+        Jid_animal_cuidador.setBounds(124, 82, 114, 20);
 
         Jid_cuidador_animal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Jid_cuidador_animalActionPerformed(evt);
             }
         });
+        getContentPane().add(Jid_cuidador_animal);
+        Jid_cuidador_animal.setBounds(124, 137, 114, 20);
 
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel1.setText("ID animal");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(28, 85, 60, 15);
 
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel2.setText("ID cuidador");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(33, 140, 64, 15);
 
+        jButton1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jButton1.setText("Insertar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(30, 220, 71, 23);
 
+        jButton2.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jButton2.setText("Limpiar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(110, 220, 71, 23);
 
+        Batras.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Batras.setText("Atras");
         Batras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BatrasActionPerformed(evt);
             }
         });
+        getContentPane().add(Batras);
+        Batras.setBounds(360, 290, 59, 23);
 
+        Bcerrar.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Bcerrar.setText("Cerrar");
         Bcerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BcerrarActionPerformed(evt);
             }
         });
+        getContentPane().add(Bcerrar);
+        Bcerrar.setBounds(430, 290, 65, 23);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("INSERTAR CUIDADO");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel1))
-                                .addGap(36, 36, 36)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Jid_animal_cuidador, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Jid_cuidador_animal, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addGap(52, 52, 52)
-                                .addComponent(jButton2)))
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Bcerrar)
-                            .addComponent(Batras)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(jLabel3)))
-                .addContainerGap(68, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Jid_animal_cuidador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Jid_cuidador_animal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(32, 32, 32)
-                .addComponent(Bcerrar)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(Batras))
-                .addContainerGap())
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/cuidados-05.png"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(-30, 0, 540, 320);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -209,6 +182,6 @@ public class InsertarCuidado extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

@@ -53,7 +53,6 @@ public class InsertarAnimal extends javax.swing.JFrame {
         Jnombre = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -79,8 +78,10 @@ public class InsertarAnimal extends javax.swing.JFrame {
         Babririmgcara = new javax.swing.JButton();
         Babririmgcuerpo = new javax.swing.JButton();
         Babririmgopcional = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(680, 395));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -88,43 +89,50 @@ public class InsertarAnimal extends javax.swing.JFrame {
         });
         getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel1.setText("Edad");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(40, 84, 24, 14);
-        getContentPane().add(Jpesoa);
-        Jpesoa.setBounds(116, 279, 111, 20);
+        jLabel1.setBounds(40, 84, 30, 15);
 
+        Jpesoa.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        getContentPane().add(Jpesoa);
+        Jpesoa.setBounds(116, 279, 111, 21);
+
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel2.setText("img");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 111, 16, 14);
-        getContentPane().add(Jnombre);
-        Jnombre.setBounds(116, 248, 111, 20);
+        jLabel2.setBounds(40, 111, 20, 15);
 
+        Jnombre.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        getContentPane().add(Jnombre);
+        Jnombre.setBounds(116, 248, 111, 21);
+
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel3.setText("img2");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(40, 140, 22, 14);
+        jLabel3.setBounds(40, 140, 26, 15);
 
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel4.setText("img3");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(40, 169, 22, 14);
+        jLabel4.setBounds(40, 169, 26, 15);
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setText("INSERTAR ANIMAL");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(248, 11, 153, 22);
-
+        jLabel10.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel10.setText("Especie");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(330, 84, 36, 14);
+        jLabel10.setBounds(330, 80, 41, 15);
 
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel5.setText("Género");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 194, 35, 14);
+        jLabel5.setBounds(40, 194, 41, 15);
 
+        jLabel11.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel11.setText("Alimentación");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(330, 139, 60, 14);
+        jLabel11.setBounds(330, 120, 72, 15);
 
+        Bcerraranimal.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Bcerraranimal.setText("Cerrar");
         Bcerraranimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,12 +140,14 @@ public class InsertarAnimal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Bcerraranimal);
-        Bcerraranimal.setBounds(454, 317, 63, 23);
+        Bcerraranimal.setBounds(550, 360, 65, 23);
 
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel6.setText("Descripción");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(40, 223, 54, 14);
+        jLabel6.setBounds(40, 223, 62, 15);
 
+        Bagregaranimal.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Bagregaranimal.setText("Agregar");
         Bagregaranimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,12 +155,14 @@ public class InsertarAnimal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Bagregaranimal);
-        Bagregaranimal.setBounds(330, 252, 71, 23);
+        Bagregaranimal.setBounds(330, 252, 80, 23);
 
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel7.setText("Nombre");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(40, 251, 37, 14);
+        jLabel7.setBounds(40, 251, 44, 15);
 
+        Blimpiaranimal.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Blimpiaranimal.setText("Limpiar");
         Blimpiaranimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,36 +170,41 @@ public class InsertarAnimal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Blimpiaranimal);
-        Blimpiaranimal.setBounds(454, 252, 65, 23);
+        Blimpiaranimal.setBounds(330, 280, 80, 23);
 
+        jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel8.setText("Peso");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(40, 282, 23, 14);
+        jLabel8.setBounds(40, 282, 25, 15);
 
+        jComboBox3.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox3ActionPerformed(evt);
             }
         });
         getContentPane().add(jComboBox3);
-        jComboBox3.setBounds(413, 136, 176, 20);
+        jComboBox3.setBounds(410, 120, 176, 21);
 
+        jComboBox1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(413, 81, 176, 20);
+        jComboBox1.setBounds(410, 80, 176, 21);
 
+        jComboBox4.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox4ActionPerformed(evt);
             }
         });
         getContentPane().add(jComboBox4);
-        jComboBox4.setBounds(413, 188, 176, 20);
+        jComboBox4.setBounds(410, 160, 176, 21);
 
+        Batras.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Batras.setText("Atras");
         Batras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,36 +212,52 @@ public class InsertarAnimal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Batras);
-        Batras.setBounds(330, 317, 59, 23);
-        getContentPane().add(Jedad);
-        Jedad.setBounds(116, 81, 111, 20);
+        Batras.setBounds(460, 360, 60, 23);
 
+        Jedad.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        getContentPane().add(Jedad);
+        Jedad.setBounds(116, 81, 111, 21);
+
+        jLabel12.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel12.setText("Id");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(40, 58, 10, 14);
+        jLabel12.setBounds(40, 58, 11, 15);
 
+        rutaimgcara.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         rutaimgcara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rutaimgcaraActionPerformed(evt);
             }
         });
         getContentPane().add(rutaimgcara);
-        rutaimgcara.setBounds(116, 108, 111, 20);
-        getContentPane().add(rutaimgcuerpo);
-        rutaimgcuerpo.setBounds(116, 137, 111, 20);
-        getContentPane().add(Jid);
-        Jid.setBounds(116, 55, 111, 20);
-        getContentPane().add(rutaimgopcional);
-        rutaimgopcional.setBounds(116, 166, 111, 20);
-        getContentPane().add(Jdescripa);
-        Jdescripa.setBounds(116, 220, 111, 20);
-        getContentPane().add(Jgeneroa);
-        Jgeneroa.setBounds(116, 194, 111, 20);
+        rutaimgcara.setBounds(116, 108, 111, 21);
 
+        rutaimgcuerpo.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        getContentPane().add(rutaimgcuerpo);
+        rutaimgcuerpo.setBounds(116, 137, 111, 21);
+
+        Jid.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        getContentPane().add(Jid);
+        Jid.setBounds(116, 55, 111, 21);
+
+        rutaimgopcional.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        getContentPane().add(rutaimgopcional);
+        rutaimgopcional.setBounds(116, 166, 111, 21);
+
+        Jdescripa.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        getContentPane().add(Jdescripa);
+        Jdescripa.setBounds(116, 220, 111, 21);
+
+        Jgeneroa.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        getContentPane().add(Jgeneroa);
+        Jgeneroa.setBounds(116, 194, 111, 21);
+
+        jLabel13.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel13.setText("Habitat");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(330, 191, 35, 14);
+        jLabel13.setBounds(330, 160, 42, 15);
 
+        Babririmgcara.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Babririmgcara.setText("Abrir");
         Babririmgcara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -234,6 +267,7 @@ public class InsertarAnimal extends javax.swing.JFrame {
         getContentPane().add(Babririmgcara);
         Babririmgcara.setBounds(245, 107, 58, 23);
 
+        Babririmgcuerpo.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Babririmgcuerpo.setText("Abrir");
         Babririmgcuerpo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,6 +277,7 @@ public class InsertarAnimal extends javax.swing.JFrame {
         getContentPane().add(Babririmgcuerpo);
         Babririmgcuerpo.setBounds(245, 136, 58, 23);
 
+        Babririmgopcional.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Babririmgopcional.setText("Abrir");
         Babririmgopcional.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,6 +286,10 @@ public class InsertarAnimal extends javax.swing.JFrame {
         });
         getContentPane().add(Babririmgopcional);
         Babririmgopcional.setBounds(245, 165, 58, 23);
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar animal -03.jpg"))); // NOI18N
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(0, 0, 676, 390);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -468,6 +507,7 @@ public class InsertarAnimal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -475,7 +515,6 @@ public class InsertarAnimal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField rutaimgcara;
     private javax.swing.JTextField rutaimgcuerpo;
     private javax.swing.JTextField rutaimgopcional;

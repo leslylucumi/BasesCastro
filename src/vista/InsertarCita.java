@@ -31,8 +31,8 @@ public class InsertarCita extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         Jidveterinario = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jidanimal = new javax.swing.JTextField();
@@ -40,96 +40,74 @@ public class InsertarCita extends javax.swing.JFrame {
         Blimpiar = new javax.swing.JButton();
         Batras = new javax.swing.JButton();
         Bcerrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar citas-04.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("CITAS MEDICAS");
+        Jidveterinario.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        getContentPane().add(Jidveterinario);
+        Jidveterinario.setBounds(120, 100, 110, 21);
 
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel3.setText("ID veterinario");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(10, 100, 72, 15);
 
-        jLabel4.setText("Id animal");
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        jLabel4.setText("ID animal");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(10, 140, 53, 15);
 
+        jidanimal.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        getContentPane().add(jidanimal);
+        jidanimal.setBounds(120, 140, 110, 21);
+
+        Bagregar.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Bagregar.setText("Agregar");
         Bagregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BagregarActionPerformed(evt);
             }
         });
+        getContentPane().add(Bagregar);
+        Bagregar.setBounds(40, 230, 80, 23);
 
+        Blimpiar.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Blimpiar.setText("Limpiar");
         Blimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BlimpiarActionPerformed(evt);
             }
         });
+        getContentPane().add(Blimpiar);
+        Blimpiar.setBounds(140, 230, 80, 23);
 
+        Batras.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Batras.setText("Atrás");
         Batras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BatrasActionPerformed(evt);
             }
         });
+        getContentPane().add(Batras);
+        Batras.setBounds(380, 270, 59, 23);
 
+        Bcerrar.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Bcerrar.setText("Cerrar");
         Bcerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BcerrarActionPerformed(evt);
             }
         });
+        getContentPane().add(Bcerrar);
+        Bcerrar.setBounds(450, 270, 65, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(152, 152, 152))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Bcerrar)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4))
-                            .addGap(46, 46, 46)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(Jidveterinario, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-                                .addComponent(jidanimal)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(40, 40, 40)
-                            .addComponent(Bagregar)
-                            .addGap(54, 54, 54)
-                            .addComponent(Blimpiar)
-                            .addGap(57, 57, 57)
-                            .addComponent(Batras))))
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(jLabel1)
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Jidveterinario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jidanimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                .addComponent(Bcerrar)
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Bagregar)
-                    .addComponent(Blimpiar)
-                    .addComponent(Batras))
-                .addGap(32, 32, 32))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar citas-04.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 530, 300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -209,6 +187,7 @@ public class InsertarCita extends javax.swing.JFrame {
     private javax.swing.JButton Blimpiar;
     private javax.swing.JTextField Jidveterinario;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField jidanimal;

@@ -59,7 +59,6 @@ public class InsertarVeterinario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(150, 150, 150));
-        setPreferredSize(new java.awt.Dimension(633, 378));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
