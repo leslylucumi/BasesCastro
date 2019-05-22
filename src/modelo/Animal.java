@@ -8,6 +8,7 @@ package modelo;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -60,7 +61,6 @@ public class Animal {
         this.id_Habitat = id_Habitat;
         this.id_Alimentacion = id_Alimentacion;
     }
-    
 
     public int getId() {
         return id;
@@ -180,7 +180,7 @@ public class Animal {
                 File file1 = new File(obje.getImganimalcara());
                 File file2 = new File(obje.getImganimalcuerpo());
                 File file3 = new File(obje.getImganimal());
-                System.out.println("nn "+file1.getPath());
+                System.out.println("nn " + file1.getPath());
                 fis1 = new FileInputStream(file1);
                 fis2 = new FileInputStream(file2);
                 fis3 = new FileInputStream(file3);
@@ -212,6 +212,7 @@ public class Animal {
                 fis2.close();
                 fis3.close();
             } catch (Exception ex) {
+                ex.printStackTrace();
                 t = false;
                 System.out.println("Errro " + ex.toString());
             }
@@ -219,72 +220,73 @@ public class Animal {
         return t;
 
     }
-    public boolean modificarAnimal(Animal obja,String sql) throws FileNotFoundException {
+
+    public boolean modificarAnimal(Animal obja, String sql) {
         ConnectBD objCon = new ConnectBD();
-         
+
         FileInputStream fis1 = null;
         FileInputStream fis2 = null;
         FileInputStream fis3 = null;
         PreparedStatement ps = null;
         boolean a = false;
-        
-       
-       try {
-           if (objCon.crearConexion()) {
-               objCon.getConexion().setAutoCommit(false);
+
+        try {
+            if (objCon.crearConexion()) {
+                objCon.getConexion().setAutoCommit(false);
                 File file1 = new File(obja.getImganimalcara());
                 File file2 = new File(obja.getImganimalcuerpo());
                 File file3 = new File(obja.getImganimal());
-                System.out.println("nn "+file1.getPath());
+                System.out.println("nn " + file1.getPath());
                 //ojo con esta parte
+                
+                    fis3 = new FileInputStream(file3);
+                
                 fis1 = new FileInputStream(file1);
                 fis2 = new FileInputStream(file2);
-                fis3 = new FileInputStream(file3);
-                
+
                 ps = objCon.getConexion().prepareStatement(sql);
                 //ps.setInt(1, obja.getId());
-                ps.setInt(2, obja.getEdad());
-                ps.setBinaryStream(3, fis1, (int) file1.length());
-                ps.setBinaryStream(4, fis2, (int) file2.length());
-                ps.setBinaryStream(5, fis3, (int) file3.length());
-                ps.setString(6, obja.getGenero());
-                ps.setString(7, obja.getDescripcion());
-                ps.setString(8, obja.getNombre());
-                ps.setDouble(9, obja.getPeso());
-                ps.setInt(10, obja.getId_Especie());
-                ps.setInt(11, obja.getId_Habitat());
-                ps.setInt(12, obja.getId_Alimentacion());
-               
+                ps.setInt(1, obja.getEdad());
+                ps.setBinaryStream(2, fis1, (int) file1.length());
+                ps.setBinaryStream(3, fis2, (int) file2.length());
+                ps.setBinaryStream(4, fis3, (int) file3.length());
+                ps.setString(5, obja.getGenero());
+                ps.setString(6, obja.getDescripcion());
+                ps.setString(7, obja.getNombre());
+                ps.setDouble(8, obja.getPeso());
+                ps.setInt(9, obja.getId_Especie());
+                ps.setInt(10, obja.getId_Habitat());
+                ps.setInt(11, obja.getId_Alimentacion());
+
 //           Statement stat;
 //           stat = objCon.getConexion().createStatement();
 //           stat.executeUpdate(sql);}
                 ps.executeUpdate();
                 objCon.getConexion().commit();
-                
-           a=true;
-           }
-       } catch (SQLException ex) {
-         a = false;
+
+                a = true;
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            a = false;
             System.out.println("Error " + ex.toString());
-       }
-       finally {
+        } finally {
             try {
-                ps.close();
+                //ps.close();
                 fis1.close();
                 fis2.close();
-                fis3.close();
+               
+                    fis3.close();
+                
+//                
             } catch (Exception ex) {
+                ex.printStackTrace();
                 a = false;
                 System.out.println("Errro " + ex.toString());
             }
         }
-       
-      return a;   
-    }  
-       
-    
-    
-    
-    } 
 
+        return a;
+    }
 
+}

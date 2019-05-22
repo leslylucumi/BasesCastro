@@ -78,18 +78,54 @@ public class ControlAnimal {
 
         try {
 
-            String img_animal;
+            String img_animal, img_animalcara, Imganimalcuerpo;
 
-            if (obja.getImganimal() != null) {
+            if (obja.getImganimal() != null || obja.getImganimal() != "") {
                 img_animal = "'" + obja.getImganimal() + "'";
             } else {
-                img_animal = null;
+                ConnectBD objCon = new ConnectBD();
+                String sql = "select * from animales where id_animal=" + id_animal + "";
+                ResultSet rs = null;
+                if (objCon.crearConexion()) {
+
+                    String a = "";
+                    try {
+                        Statement stat = objCon.getConexion().createStatement();
+                        rs = stat.executeQuery(sql);
+                        while (rs.next()) {
+
+                            obja = new Animal(rs.getInt(2), rs.getBlob(3).toString(), rs.getBlob(4).toString(), rs.getString(5).toString(), rs.getString(6),
+                                    rs.getString(7), rs.getString(8), rs.getDouble(9), rs.getInt(10), rs.getInt(11), rs.getInt(12));
+
+                        }
+
+                        objCon.getConexion().close();
+                    } catch (Exception e) {
+
+                        System.out.println(e.toString());
+                    }
+                }
             }
 
-            String sql = "update animales set edad = ?, img_animalcara = ?,  img_animalcuerpo =?, img_animal = ?,genero = ? ,descripcion = ? ,nombre = ? ,peso =  ?  ,id_especie_animal = ? ,id_habitat_animal = ?,id_clasif_animal = ?"
+            if (obja.getImganimalcara() != null || obja.getImganimalcara() != "") {
+                img_animalcara = "'" + obja.getImganimalcara() + "'";
+            } else {
+                img_animalcara = null;
+            }
+
+            if (obja.getImganimalcuerpo() != null || obja.getImganimalcuerpo() != "") {
+                Imganimalcuerpo = "'" + obja.getImganimalcuerpo() + "'";
+            } else {
+
+                Imganimalcuerpo = null;
+            }
+
+            String sql = "update animales set edad = ?, img_animalcara = ?,  img_animalcuerpo =?, "
+                    + "img_animal = ?,genero = ? ,descripcion = ? ,nombre = ? ,peso =  ?  "
+                    + ",id_especie_animal = ? ,id_habitat_animal = ?,id_clasif_animal = ?"
                     + " where id_animal=" + id_animal;
 
-            c = obja.modificarAnimal(obja,sql);
+            c = obja.modificarAnimal(obja, sql);
 
         } catch (Exception e) {
 

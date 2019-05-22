@@ -450,6 +450,11 @@ public class ModificarAnimal extends javax.swing.JFrame {
                         byteimage = blob.getBytes(1, (int) blob.length());
                         byteimage1 = blobe.getBytes(1, (int) blobe.length());
                         byteimage2 = blobs.getBytes(1, (int) blobs.length());
+                        
+                        System.out.println(byteimage);
+                        System.out.println(byteimage1);
+                        System.out.println(byteimage2);
+                        
                         ImageIcon imge = new ImageIcon(byteimage);
                         ImageIcon imge1 = new ImageIcon(byteimage1);
                         ImageIcon imge2 = new ImageIcon(byteimage2);
@@ -487,6 +492,8 @@ public class ModificarAnimal extends javax.swing.JFrame {
             Truta3.setText(objan.getImganimal());
             Truta1.setText(objan.getImganimalcara());
             Truta2.setText(objan.getImganimalcuerpo());
+            
+            
 
             int id_Alimentacion = 0;
             int id_Especie = 0;
@@ -571,6 +578,8 @@ public class ModificarAnimal extends javax.swing.JFrame {
         int id_habitat_animal = 0;
         int id_clasif_animal = 0;
 
+        
+        
         img_animalcara = Truta1.getText();
         img_animalcuerpo = Truta2.getText();
         img_animal = Truta3.getText();
@@ -611,6 +620,8 @@ public class ModificarAnimal extends javax.swing.JFrame {
 
         Animal obja = new Animal(edad, img_animalcara, img_animalcuerpo, img_animal, genero, descripcion, nombre, peso, id_Alimentacion,
                 id_Especie, id_Habitat);
+        
+        System.out.println("LA TRUTA ES "+img_animalcara);
 
         try {
             boolean ch = objm.ModificarAnimales(obja, id_animal);

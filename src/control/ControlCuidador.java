@@ -7,6 +7,7 @@ package control;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.LinkedList;
 import modelo.ConnectBD;
 import modelo.Cuidador;
 
@@ -53,20 +54,28 @@ public class ControlCuidador {
 
       }
       
-      public Cuidador Consultarcuidadores(){
+      public   LinkedList<Cuidador> Consultarcuidadores(){
           ConnectBD objCon = new ConnectBD();
-          String sql = "select * from cuidadores ";
+          String sql = "select * from cuidadores";
         ResultSet rs = null;
         Cuidador objc = null;
+        LinkedList<Cuidador> Lcuidador=new LinkedList<Cuidador>() ;
        if (objCon.crearConexion()) {
             try {
                 Statement stat = objCon.getConexion().createStatement();
                 rs = stat.executeQuery(sql);
+               
                 while (rs.next()) {
+                    
+                     
                     objc = new Cuidador (rs.getInt(1),rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6),
                             rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10));
-
-                    System.out.println(rs.getString(2));
+                    
+                    
+                    
+                    Lcuidador.add(objc);
+ 
+                   
                 }
                 objCon.getConexion().close();
             } catch (Exception e) {
@@ -76,7 +85,7 @@ public class ControlCuidador {
         }
        
 
-        return objc;
+        return Lcuidador;
       
       }
       
