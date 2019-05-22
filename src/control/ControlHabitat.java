@@ -69,6 +69,31 @@ public class ControlHabitat {
         return objh;
 
       }
+         public LinkedList<Habitat> ConsultarHabitat() {
+          ConnectBD objCon = new ConnectBD();
+          String sql = "select* from habitats" ;
+        ResultSet rs = null;
+        Habitat objh = null;
+        LinkedList<Habitat> Lhabitats=new  LinkedList<Habitat> ();
+       if (objCon.crearConexion()) {
+            try {
+                Statement stat = objCon.getConexion().createStatement();
+                rs = stat.executeQuery(sql);
+                while (rs.next()) {
+                    objh = new Habitat (rs.getByte(1),rs.getString(2), rs.getString(3));
+                     Lhabitats.add(objh);
+                    System.out.println(rs.getString(2));
+                }
+                objCon.getConexion().close();
+            } catch (Exception e) {
+
+                System.out.println(e.toString());
+            }
+        }
+
+        return Lhabitats;
+
+      }
       public boolean ModificarHabitats(Habitat objc, int id) {
         boolean c = false;
 

@@ -40,7 +40,7 @@ public class InsertarCita extends javax.swing.JFrame {
         Blimpiar = new javax.swing.JButton();
         Batras = new javax.swing.JButton();
         Bcerrar = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar citas-04.png"))); // NOI18N
 
@@ -105,9 +105,9 @@ public class InsertarCita extends javax.swing.JFrame {
         getContentPane().add(Bcerrar);
         Bcerrar.setBounds(450, 270, 65, 23);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar citas-04.png"))); // NOI18N
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 530, 300);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar citas-04.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 530, 300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -186,10 +186,10 @@ public class InsertarCita extends javax.swing.JFrame {
     private javax.swing.JButton Bcerrar;
     private javax.swing.JButton Blimpiar;
     private javax.swing.JTextField Jidveterinario;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField jidanimal;
     // End of variables declaration//GEN-END:variables
 }

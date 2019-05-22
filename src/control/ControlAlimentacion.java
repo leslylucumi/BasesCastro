@@ -68,6 +68,32 @@ public class ControlAlimentacion {
         return obja;
 
       }
+    public LinkedList<Alimentacion> ConsultarAlimentacion() {
+          ConnectBD objCon = new ConnectBD();
+          String sql = "select* from clasif_alim" ;
+        ResultSet rs = null;
+        Alimentacion obja = null;
+        LinkedList<Alimentacion> Lalimentacion=new LinkedList<Alimentacion>();
+       if (objCon.crearConexion()) {
+            try {
+                Statement stat = objCon.getConexion().createStatement();
+                rs = stat.executeQuery(sql);
+                while (rs.next()) {
+                    obja = new Alimentacion (rs.getInt(1),rs.getString(2));
+                    Lalimentacion.add(obja);
+
+                    
+                }
+                objCon.getConexion().close();
+            } catch (Exception e) {
+
+                System.out.println(e.toString());
+            }
+        }
+
+        return Lalimentacion;
+
+      }
       public boolean ModificarAlimentaciones(Alimentacion obja, int id) {
         boolean c = false;
 

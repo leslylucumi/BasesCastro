@@ -5,20 +5,20 @@
  */
 package vista;
 
-import control.ControlAlimentacion;
+import control.ControlHabitat;
 import java.util.LinkedList;
-import modelo.Alimentacion;
+import modelo.Habitat;
 
 /**
  *
  * @author Ángela
  */
-public class ConsultarAlimentacion extends javax.swing.JFrame {
+public class Consultarhabitat extends javax.swing.JFrame {
 
     /**
-     * Creates new form ConsultarAlimentacion
+     * Creates new form consultarhabitat
      */
-    public ConsultarAlimentacion() {
+    public Consultarhabitat() {
         initComponents();
     }
 
@@ -36,18 +36,23 @@ public class ConsultarAlimentacion extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(410, 310));
-        setPreferredSize(new java.awt.Dimension(410, 310));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "ID", "nombre"
+                "ID", "nombre", "descripcion"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -66,35 +71,36 @@ public class ConsultarAlimentacion extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(63, 63, 63)
+                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(jButton1)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(50, 50, 50))
+                .addGap(42, 42, 42))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ControlAlimentacion objc = new ControlAlimentacion ();
-        LinkedList<Alimentacion> LEspecie=objc.ConsultarAlimentacion();
+       ControlHabitat objc = new ControlHabitat();
+        LinkedList<Habitat> LEspecie=objc.ConsultarHabitat();
  
         for (int i = 0; i < LEspecie.size(); i++) {
             jTable1.setValueAt(LEspecie.get(i).getId(), i, 0);
-            jTable1.setValueAt(LEspecie.get(i).getNombreA(), i, 1);
+            jTable1.setValueAt(LEspecie.get(i).getNombreH(), i, 1);
+            jTable1.setValueAt(LEspecie.get(i).getDescripcion(), i, 2);
             
-        } 
+        }  
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -114,20 +120,21 @@ public class ConsultarAlimentacion extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ConsultarAlimentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Consultarhabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ConsultarAlimentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Consultarhabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ConsultarAlimentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Consultarhabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ConsultarAlimentacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Consultarhabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ConsultarAlimentacion().setVisible(true);
+                new Consultarhabitat().setVisible(true);
             }
         });
     }

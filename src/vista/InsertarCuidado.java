@@ -39,6 +39,8 @@ public class InsertarCuidado extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(530, 321));
+        setPreferredSize(new java.awt.Dimension(530, 325));
         getContentPane().setLayout(null);
         getContentPane().add(Jid_animal_cuidador);
         Jid_animal_cuidador.setBounds(124, 82, 114, 20);

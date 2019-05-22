@@ -78,9 +78,10 @@ public class InsertarAnimal extends javax.swing.JFrame {
         Babririmgcara = new javax.swing.JButton();
         Babririmgcuerpo = new javax.swing.JButton();
         Babririmgopcional = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(680, 395));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -286,9 +287,9 @@ public class InsertarAnimal extends javax.swing.JFrame {
         getContentPane().add(Babririmgopcional);
         Babririmgopcional.setBounds(245, 165, 58, 23);
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar animal-03.png"))); // NOI18N
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(-40, 0, 670, 390);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar animal -03.jpg"))); // NOI18N
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(0, 0, 676, 390);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -506,6 +507,7 @@ public class InsertarAnimal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -513,7 +515,6 @@ public class InsertarAnimal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField rutaimgcara;
     private javax.swing.JTextField rutaimgcuerpo;
     private javax.swing.JTextField rutaimgopcional;
