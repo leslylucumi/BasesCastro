@@ -20,6 +20,12 @@ public class Habitat {
     private String zona; 
     private String descripcion; 
 
+    public Habitat(int id, String NombreH, String descripcion) {
+        this.id = id;
+        this.NombreH = NombreH;
+        this.descripcion = descripcion;
+    }
+
     public Habitat(int id, String NombreH) {
         this.id = id;
         this.NombreH = NombreH;
