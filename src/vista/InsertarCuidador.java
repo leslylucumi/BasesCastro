@@ -58,7 +58,6 @@ public class InsertarCuidador extends javax.swing.JFrame {
         Batrascuidador = new javax.swing.JButton();
         Bcerrarcuidador = new javax.swing.JButton();
         Blimpiarcuidador = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
 
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
@@ -82,41 +81,50 @@ public class InsertarCuidador extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel1.setText("Primer nombre");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 100, 69, 14);
+        jLabel1.setBounds(20, 120, 90, 20);
 
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel2.setText("Segundo nombre");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(10, 132, 81, 14);
+        jLabel2.setBounds(20, 150, 100, 20);
 
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel3.setText("Primer apellido");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 170, 69, 14);
+        jLabel3.setBounds(20, 180, 90, 20);
 
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel4.setText("Segundo apellido");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 208, 81, 14);
+        jLabel4.setBounds(20, 210, 100, 20);
 
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel5.setText("Dirección");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(413, 166, 43, 14);
+        jLabel5.setBounds(310, 165, 50, 30);
 
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel6.setText("Telefono2");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(413, 135, 48, 14);
+        jLabel6.setBounds(310, 125, 52, 50);
 
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel7.setText("Telefono1");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(413, 100, 48, 14);
+        jLabel7.setBounds(310, 105, 52, 30);
 
+        jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel8.setText("Correo");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(413, 63, 33, 14);
+        jLabel8.setBounds(20, 240, 50, 20);
 
+        jLabel9.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel9.setText("Edad");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(413, 204, 24, 14);
+        jLabel9.setBounds(310, 200, 30, 15);
 
         Jnombrec1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,7 +132,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Jnombrec1);
-        Jnombrec1.setBounds(109, 97, 115, 19);
+        Jnombrec1.setBounds(130, 120, 115, 19);
 
         Jnombrec2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +140,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Jnombrec2);
-        Jnombrec2.setBounds(109, 129, 115, 20);
+        Jnombrec2.setBounds(130, 150, 115, 20);
 
         Japellidoc2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +148,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Japellidoc2);
-        Japellidoc2.setBounds(109, 205, 115, 20);
+        Japellidoc2.setBounds(130, 210, 115, 20);
 
         Japellidoc1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +156,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Japellidoc1);
-        Japellidoc1.setBounds(109, 167, 115, 20);
+        Japellidoc1.setBounds(130, 180, 115, 20);
 
         Jtelefonoc1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,7 +164,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Jtelefonoc1);
-        Jtelefonoc1.setBounds(479, 97, 115, 20);
+        Jtelefonoc1.setBounds(420, 110, 115, 20);
 
         Jcorreoc.setToolTipText("");
         Jcorreoc.addActionListener(new java.awt.event.ActionListener() {
@@ -165,7 +173,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Jcorreoc);
-        Jcorreoc.setBounds(479, 60, 115, 19);
+        Jcorreoc.setBounds(130, 240, 115, 19);
 
         Jdireccionc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,7 +181,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Jdireccionc);
-        Jdireccionc.setBounds(479, 163, 115, 20);
+        Jdireccionc.setBounds(420, 170, 115, 20);
 
         Jtelefonoc2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,7 +189,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Jtelefonoc2);
-        Jtelefonoc2.setBounds(479, 132, 115, 20);
+        Jtelefonoc2.setBounds(420, 140, 115, 20);
 
         Jedadc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,8 +197,9 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Jedadc);
-        Jedadc.setBounds(479, 201, 115, 20);
+        Jedadc.setBounds(420, 200, 115, 20);
 
+        Bagregarcuidador.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Bagregarcuidador.setText("Agregar");
         Bagregarcuidador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,11 +207,12 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Bagregarcuidador);
-        Bagregarcuidador.setBounds(109, 313, 71, 23);
+        Bagregarcuidador.setBounds(60, 300, 75, 23);
 
-        jLabel10.setText("Identificación");
+        jLabel10.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        jLabel10.setText("Identificación ");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(10, 63, 64, 14);
+        jLabel10.setBounds(20, 90, 90, 15);
 
         Jidcuidador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,8 +220,9 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Jidcuidador);
-        Jidcuidador.setBounds(109, 60, 115, 19);
+        Jidcuidador.setBounds(130, 90, 115, 19);
 
+        Batrascuidador.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Batrascuidador.setText("Atras");
         Batrascuidador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,8 +230,9 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Batrascuidador);
-        Batrascuidador.setBounds(335, 313, 59, 23);
+        Batrascuidador.setBounds(510, 350, 70, 23);
 
+        Bcerrarcuidador.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Bcerrarcuidador.setText("Cerrar");
         Bcerrarcuidador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,20 +240,16 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Bcerrarcuidador);
-        Bcerrarcuidador.setBounds(441, 313, 63, 23);
+        Bcerrarcuidador.setBounds(595, 350, 70, 23);
 
+        Blimpiarcuidador.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Blimpiarcuidador.setText("Limpiar");
         getContentPane().add(Blimpiarcuidador);
-        Blimpiarcuidador.setBounds(228, 313, 65, 23);
+        Blimpiarcuidador.setBounds(180, 300, 71, 23);
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel11.setText("INSERTAR CUIDADOR");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(216, 11, 178, 22);
-
-        jLabel12.setText("jLabel12");
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar cuidador-02.jpg"))); // NOI18N
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(0, 0, 630, 380);
+        jLabel12.setBounds(0, 0, 680, 380);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -397,7 +405,6 @@ public class InsertarCuidador extends javax.swing.JFrame {
     private javax.swing.JTextField Jtelefonoc2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
