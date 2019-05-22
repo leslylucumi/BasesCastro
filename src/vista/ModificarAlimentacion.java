@@ -32,7 +32,6 @@ public class ModificarAlimentacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jAceptar = new javax.swing.JButton();
         jModificar = new javax.swing.JButton();
@@ -41,13 +40,14 @@ public class ModificarAlimentacion extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jId = new javax.swing.JTextField();
         Batras = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel11.setText("MODIFICAR ALIMENTACIÓN");
+        getContentPane().setLayout(null);
 
         jLabel1.setText("Nombre");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(250, 40, 37, 14);
 
         jAceptar.setText("Aceptar");
         jAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -55,6 +55,8 @@ public class ModificarAlimentacion extends javax.swing.JFrame {
                 jAceptarActionPerformed(evt);
             }
         });
+        getContentPane().add(jAceptar);
+        jAceptar.setBounds(51, 108, 71, 23);
 
         jModificar.setText("Modificar");
         jModificar.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +64,8 @@ public class ModificarAlimentacion extends javax.swing.JFrame {
                 jModificarActionPerformed(evt);
             }
         });
+        getContentPane().add(jModificar);
+        jModificar.setBounds(128, 108, 75, 23);
 
         Bcerrar.setText("Cerrar");
         Bcerrar.addActionListener(new java.awt.event.ActionListener() {
@@ -69,20 +73,28 @@ public class ModificarAlimentacion extends javax.swing.JFrame {
                 BcerrarActionPerformed(evt);
             }
         });
+        getContentPane().add(Bcerrar);
+        Bcerrar.setBounds(209, 108, 63, 23);
 
         jNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jNombreActionPerformed(evt);
             }
         });
+        getContentPane().add(jNombre);
+        jNombre.setBounds(300, 40, 85, 20);
 
         jLabel2.setText("Id");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(10, 45, 10, 14);
 
         jId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jIdActionPerformed(evt);
             }
         });
+        getContentPane().add(jId);
+        jId.setBounds(118, 39, 85, 20);
 
         Batras.setText("Atras");
         Batras.addActionListener(new java.awt.event.ActionListener() {
@@ -90,60 +102,12 @@ public class ModificarAlimentacion extends javax.swing.JFrame {
                 BatrasActionPerformed(evt);
             }
         });
+        getContentPane().add(Batras);
+        Batras.setBounds(278, 108, 59, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel11)
-                .addGap(107, 107, 107))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(98, 98, 98)
-                                .addComponent(jId))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(71, 71, 71)
-                                .addComponent(jNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(jAceptar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jModificar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Bcerrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Batras)))
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jId, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jNombre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jAceptar)
-                    .addComponent(jModificar)
-                    .addComponent(Bcerrar)
-                    .addComponent(Batras))
-                .addGap(15, 15, 15))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar alimentacion-06.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 610, 170);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -256,8 +220,8 @@ public class ModificarAlimentacion extends javax.swing.JFrame {
     private javax.swing.JButton jAceptar;
     private javax.swing.JTextField jId;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jModificar;
     private javax.swing.JTextField jNombre;
     // End of variables declaration//GEN-END:variables
