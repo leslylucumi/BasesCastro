@@ -7,6 +7,7 @@ package control;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.LinkedList;
 import modelo.ConnectBD;
 import modelo.Veterinario;
 
@@ -49,6 +50,34 @@ public class ControlVeterinario {
         }
 
         return objv;
+
+    }
+       public  LinkedList<Veterinario> ConsultarVeterinarios() {
+        ConnectBD objCon = new ConnectBD();
+        String sql = "select* from veterinarios";
+        ResultSet rs = null;
+        Veterinario objv = null;
+         LinkedList<Veterinario> Lveterinarios=new LinkedList<Veterinario>() ;
+
+        if (objCon.crearConexion()) {
+            try {
+                Statement stat = objCon.getConexion().createStatement();
+                rs = stat.executeQuery(sql);
+                while (rs.next()) {
+                    objv = new Veterinario (rs.getInt(1),rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6),
+                            rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10));
+                    
+                   Lveterinarios.add(objv);
+                    System.out.println(rs.getString(2));
+                }
+                objCon.getConexion().close();
+            } catch (Exception e) {
+
+                System.out.println(e.toString());
+            }
+        }
+
+        return Lveterinarios;
 
     }
         public boolean ModificarVeterinarios(Veterinario objv, int id_veterinario) {

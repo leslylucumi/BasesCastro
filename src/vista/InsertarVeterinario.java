@@ -61,45 +61,54 @@ public class InsertarVeterinario extends javax.swing.JFrame {
         setBackground(new java.awt.Color(150, 150, 150));
         getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel1.setText("Primer nombre");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 180, 100, 20);
+        jLabel1.setBounds(20, 120, 100, 20);
 
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel2.setText("Segundo nombre");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(10, 210, 100, 14);
+        jLabel2.setBounds(20, 150, 100, 20);
 
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel3.setText("Primer apellido");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 240, 100, 20);
+        jLabel3.setBounds(20, 180, 100, 20);
 
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel4.setText("Segundo apellido");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 270, 100, 14);
+        jLabel4.setBounds(20, 190, 100, 60);
 
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel6.setText("Edad");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(220, 150, 50, 14);
+        jLabel6.setBounds(310, 200, 50, 20);
         jLabel6.getAccessibleContext().setAccessibleName("jLabel6");
 
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel7.setText("Correo");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(220, 180, 50, 14);
+        jLabel7.setBounds(20, 240, 50, 20);
         jLabel7.getAccessibleContext().setAccessibleName("jLabel7");
 
+        jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel8.setText("Teléfono 1");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(210, 210, 60, 14);
+        jLabel8.setBounds(310, 110, 60, 15);
         jLabel8.getAccessibleContext().setAccessibleName("jLabel8");
 
+        jLabel9.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel9.setText("Teléfono 2");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(210, 240, 60, 14);
+        jLabel9.setBounds(310, 140, 60, 20);
         jLabel9.getAccessibleContext().setAccessibleName("jLabel9");
 
+        jLabel10.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel10.setText("Dirección");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(210, 270, 60, 14);
+        jLabel10.setBounds(310, 170, 60, 15);
         jLabel10.getAccessibleContext().setAccessibleName("jLabel10");
 
         jt_nom1veterinario.addActionListener(new java.awt.event.ActionListener() {
@@ -108,9 +117,10 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jt_nom1veterinario);
-        jt_nom1veterinario.setBounds(110, 180, 90, 20);
+        jt_nom1veterinario.setBounds(130, 120, 115, 19);
         jt_nom1veterinario.getAccessibleContext().setAccessibleName("idveterinario");
 
+        Bagregarveterinario.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Bagregarveterinario.setText("Agregar");
         Bagregarveterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,9 +128,10 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Bagregarveterinario);
-        Bagregarveterinario.setBounds(40, 300, 71, 30);
+        Bagregarveterinario.setBounds(60, 310, 80, 23);
         Bagregarveterinario.getAccessibleContext().setAccessibleName("agregar");
 
+        Blimpiarveterinario.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Blimpiarveterinario.setText("Limpiar");
         Blimpiarveterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,7 +139,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Blimpiarveterinario);
-        Blimpiarveterinario.setBounds(130, 300, 70, 30);
+        Blimpiarveterinario.setBounds(180, 310, 80, 23);
         Blimpiarveterinario.getAccessibleContext().setAccessibleName("limpiar");
 
         jt_nom2veterinario.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +148,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jt_nom2veterinario);
-        jt_nom2veterinario.setBounds(110, 210, 90, 20);
+        jt_nom2veterinario.setBounds(130, 150, 115, 19);
 
         jt_ape1veterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,7 +156,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jt_ape1veterinario);
-        jt_ape1veterinario.setBounds(110, 240, 90, 20);
+        jt_ape1veterinario.setBounds(130, 180, 115, 19);
 
         jt_ape2veterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,7 +164,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jt_ape2veterinario);
-        jt_ape2veterinario.setBounds(110, 270, 90, 20);
+        jt_ape2veterinario.setBounds(130, 210, 115, 19);
 
         jt_edadveterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,7 +172,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jt_edadveterinario);
-        jt_edadveterinario.setBounds(270, 150, 90, 20);
+        jt_edadveterinario.setBounds(420, 200, 115, 19);
 
         jt_correoveterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,7 +180,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jt_correoveterinario);
-        jt_correoveterinario.setBounds(270, 180, 90, 20);
+        jt_correoveterinario.setBounds(130, 240, 115, 19);
 
         jt_tel1veterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,7 +188,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jt_tel1veterinario);
-        jt_tel1veterinario.setBounds(270, 210, 90, 20);
+        jt_tel1veterinario.setBounds(420, 110, 115, 19);
 
         jt_tel2veterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,7 +196,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jt_tel2veterinario);
-        jt_tel2veterinario.setBounds(270, 240, 90, 20);
+        jt_tel2veterinario.setBounds(420, 140, 115, 19);
 
         jt_dirveterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,11 +204,12 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jt_dirveterinario);
-        jt_dirveterinario.setBounds(270, 270, 90, 20);
+        jt_dirveterinario.setBounds(420, 170, 115, 19);
 
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jLabel5.setText("Identificación");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 150, 100, 20);
+        jLabel5.setBounds(20, 90, 100, 20);
 
         Jidveterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,8 +217,9 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Jidveterinario);
-        Jidveterinario.setBounds(110, 150, 90, 20);
+        Jidveterinario.setBounds(130, 90, 115, 19);
 
+        Batrasveterinario.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Batrasveterinario.setText("Atras");
         Batrasveterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,8 +227,9 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Batrasveterinario);
-        Batrasveterinario.setBounds(220, 300, 70, 30);
+        Batrasveterinario.setBounds(470, 340, 70, 23);
 
+        Bcerrarveterinario.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Bcerrarveterinario.setText("Cerrar");
         Bcerrarveterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,7 +237,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Bcerrarveterinario);
-        Bcerrarveterinario.setBounds(550, 320, 63, 23);
+        Bcerrarveterinario.setBounds(550, 340, 70, 23);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar Veterinario-02.jpg"))); // NOI18N
         getContentPane().add(jLabel12);
