@@ -7,6 +7,7 @@ package vista;
 
 import control.ControlCuidador;
 import modelo.Cuidador;
+import vista.OpcionesInsertar;
 
 /**
  *
@@ -79,8 +80,6 @@ public class InsertarCuidador extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(700, 500));
-        setPreferredSize(new java.awt.Dimension(700, 500));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
@@ -222,7 +221,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Jidcuidador);
-        Jidcuidador.setBounds(130, 89, 115, 20);
+        Jidcuidador.setBounds(130, 90, 115, 19);
 
         Batrascuidador.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Batrascuidador.setText("Atras");
@@ -250,11 +249,7 @@ public class InsertarCuidador extends javax.swing.JFrame {
         Blimpiarcuidador.setBounds(180, 300, 71, 23);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar cuidador-02.jpg"))); // NOI18N
-<<<<<<< HEAD
-        jLabel12.setMinimumSize(new java.awt.Dimension(680, 380));
-=======
         jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
->>>>>>> a52db30927b796fe629f5e635f2732765153ac86
         getContentPane().add(jLabel12);
         jLabel12.setBounds(0, 0, 680, 380);
 
