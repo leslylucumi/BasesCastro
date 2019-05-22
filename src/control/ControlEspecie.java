@@ -69,6 +69,31 @@ public class ControlEspecie {
         return obje;
 
     }
+        public LinkedList<Especie> ConsultarEspecies() {
+        ConnectBD objCon = new ConnectBD();
+        String sql = "select* from especies";
+        ResultSet rs = null;
+        Especie obje = null;
+        LinkedList<Especie> Lespecies=new LinkedList<Especie>();
+        if (objCon.crearConexion()) {
+            try {
+                Statement stat = objCon.getConexion().createStatement();
+                rs = stat.executeQuery(sql);
+                while (rs.next()) {
+                    obje = new Especie(rs.getInt(1),rs.getString(2));
+
+                    Lespecies.add(obje);
+                }
+                objCon.getConexion().close();
+            } catch (Exception e) {
+
+                System.out.println(e.toString());
+            }
+        }
+
+        return Lespecies;
+
+    }
 
     public boolean ModificarEspecies(Especie obje, int id) {
         boolean c = false;

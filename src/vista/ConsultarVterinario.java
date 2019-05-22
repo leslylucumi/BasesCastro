@@ -5,20 +5,20 @@
  */
 package vista;
 
-import control.ControlCuidador;
+import control.ControlVeterinario;
 import java.util.LinkedList;
-import modelo.Cuidador;
+import modelo.Veterinario;
 
 /**
  *
- * @author LeslyLC
+ * @author Ángela
  */
-public class ConsultarCuidador extends javax.swing.JFrame {
+public class ConsultarVterinario extends javax.swing.JFrame {
 
     /**
-     * Creates new form ConsultarCuidador
+     * Creates new form ConsultarVterinario
      */
-    public ConsultarCuidador() {
+    public ConsultarVterinario() {
         initComponents();
     }
 
@@ -51,7 +51,7 @@ public class ConsultarCuidador extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "nombre1", "nombre2", "apellido1", "apellido2", "edad", "correo", "tel1", "tel2", "direccon"
+                "ID", "nombre 1", "nombre 2", "apellido 1", "apellido 2", "edad", "correo", "tel1", "tel2", "direccion"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -69,51 +69,42 @@ public class ConsultarCuidador extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 798, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 668, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(31, 31, 31)
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(29, 29, 29)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(28, 28, 28))
+                .addGap(33, 33, 33))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ControlCuidador objc = new ControlCuidador();
-        LinkedList<Cuidador> Lcuidador=objc.Consultarcuidadores();
+         ControlVeterinario objc = new ControlVeterinario();
+        LinkedList<Veterinario> LVeterinario=objc.ConsultarVeterinarios();
  
-        for (int i = 0; i < Lcuidador.size(); i++) {
-            jTable1.setValueAt(Lcuidador.get(i).getId_cuidador(), i, 0);
-            jTable1.setValueAt(Lcuidador.get(i).getNombrec1(), i, 1);
-            jTable1.setValueAt(Lcuidador.get(i).getNombrec2(), i, 2);
-            jTable1.setValueAt(Lcuidador.get(i).getApellidoc1(), i, 3);
-            jTable1.setValueAt(Lcuidador.get(i).getApellidoc2(), i, 4);
-            jTable1.setValueAt(Lcuidador.get(i).getEdadc(), i, 5);
-            jTable1.setValueAt(Lcuidador.get(i).getCorreoc(), i, 6);
-            jTable1.setValueAt(Lcuidador.get(i).getTelc1(), i, 7);
-            jTable1.setValueAt(Lcuidador.get(i).getTelc2(), i, 8);
-            jTable1.setValueAt(Lcuidador.get(i).getDirc(), i, 9);
-            
-            
-          //  jTable1.setValueAt(Lcuidador.get(i).getApellidoc1(), i, 4);
-        
+        for (int i = 0; i < LVeterinario.size(); i++) {
+            jTable1.setValueAt(LVeterinario.get(i).getId_veterinario(), i, 0);
+            jTable1.setValueAt(LVeterinario.get(i).getNombrev1(), i, 1);
+            jTable1.setValueAt(LVeterinario.get(i).getNombrev2(), i, 2);
+            jTable1.setValueAt(LVeterinario.get(i).getApellidov1(), i, 3);
+            jTable1.setValueAt(LVeterinario.get(i).getApellidov2(), i, 4);
+            jTable1.setValueAt(LVeterinario.get(i).getEdadv(), i, 5);
+            jTable1.setValueAt(LVeterinario.get(i).getCorreov(), i, 6);
+            jTable1.setValueAt(LVeterinario.get(i).getTelv1(), i, 7);
+            jTable1.setValueAt(LVeterinario.get(i).getTelv2(), i, 8);
+            jTable1.setValueAt(LVeterinario.get(i).getDirv(), i, 9);
         }
-        
-       // jTable1
-        
-        Object O[]=null;
- 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -133,20 +124,20 @@ public class ConsultarCuidador extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ConsultarCuidador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultarVterinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ConsultarCuidador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultarVterinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ConsultarCuidador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultarVterinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ConsultarCuidador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultarVterinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ConsultarCuidador().setVisible(true);
+                new ConsultarVterinario().setVisible(true);
             }
         });
     }
