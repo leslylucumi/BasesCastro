@@ -78,6 +78,11 @@ public class OpcionesInsertar extends javax.swing.JFrame {
         });
 
         Batras.setText("Atras");
+        Batras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BatrasActionPerformed(evt);
+            }
+        });
 
         Bcerrar.setText("Cerrar");
         Bcerrar.addActionListener(new java.awt.event.ActionListener() {
@@ -165,6 +170,12 @@ public class OpcionesInsertar extends javax.swing.JFrame {
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_BveterinarioActionPerformed
+
+    private void BatrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrasActionPerformed
+        Opciones abrir = new Opciones();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BatrasActionPerformed
 
     /**
      * @param args the command line arguments

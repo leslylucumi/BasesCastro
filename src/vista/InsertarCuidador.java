@@ -80,6 +80,8 @@ public class InsertarCuidador extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(692, 418));
+        setPreferredSize(new java.awt.Dimension(692, 418));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
@@ -245,6 +247,11 @@ public class InsertarCuidador extends javax.swing.JFrame {
 
         Blimpiarcuidador.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Blimpiarcuidador.setText("Limpiar");
+        Blimpiarcuidador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BlimpiarcuidadorActionPerformed(evt);
+            }
+        });
         getContentPane().add(Blimpiarcuidador);
         Blimpiarcuidador.setBounds(180, 300, 71, 23);
 
@@ -353,6 +360,19 @@ public class InsertarCuidador extends javax.swing.JFrame {
     private void BcerrarcuidadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarcuidadorActionPerformed
         System.exit(0);
     }//GEN-LAST:event_BcerrarcuidadorActionPerformed
+
+    private void BlimpiarcuidadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlimpiarcuidadorActionPerformed
+     Jidcuidador.setText("");
+     Jnombrec1.setText("");
+      Jnombrec2.setText("");
+     Japellidoc1.setText("");
+     Japellidoc2.setText("");
+       Jedadc.setText("");
+     Jcorreoc.setText("");
+     Jtelefonoc1.setText("");
+    Jtelefonoc2.setText("");
+      Jdireccionc.setText("");      
+    }//GEN-LAST:event_BlimpiarcuidadorActionPerformed
 
     /**
      * @param args the command line arguments

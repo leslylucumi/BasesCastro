@@ -362,8 +362,15 @@ public class InsertarAnimal extends javax.swing.JFrame {
     }//GEN-LAST:event_BagregaranimalActionPerformed
 
     private void BlimpiaranimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlimpiaranimalActionPerformed
-        //cajadetexto1.setText(null);
-        //cajadetexto2.setText("");
+        Jid.setText("");
+        Jedad.setText("");
+        rutaimgcara.setText("");
+         rutaimgcuerpo.setText("");
+        rutaimgopcional.setText("");
+         Jgeneroa.setText("");
+         Jdescripa.setText("");
+         Jnombre.setText("");
+      Jpesoa.setText("");
     }//GEN-LAST:event_BlimpiaranimalActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed

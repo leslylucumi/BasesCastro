@@ -142,7 +142,9 @@ public class InsertarCita extends javax.swing.JFrame {
     }//GEN-LAST:event_BatrasActionPerformed
 
     private void BlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlimpiarActionPerformed
-        // TODO add your handling code here:
+       Jidveterinario.setText("");
+        jidanimal.setText("");
+
     }//GEN-LAST:event_BlimpiarActionPerformed
 
     /**

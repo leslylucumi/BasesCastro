@@ -59,6 +59,8 @@ public class InsertarVeterinario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(150, 150, 150));
+        setMinimumSize(new java.awt.Dimension(690, 402));
+        setPreferredSize(new java.awt.Dimension(690, 402));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
@@ -241,7 +243,7 @@ public class InsertarVeterinario extends javax.swing.JFrame {
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zoologico/insertar Veterinario-02.jpg"))); // NOI18N
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(-40, 0, 670, 380);
+        jLabel12.setBounds(0, 0, 670, 380);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -251,7 +253,16 @@ public class InsertarVeterinario extends javax.swing.JFrame {
     }//GEN-LAST:event_jt_nom1veterinarioActionPerformed
 
     private void BlimpiarveterinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlimpiarveterinarioActionPerformed
-        // TODO add your handling code here:
+      jt_nom1veterinario.setText("");
+    jt_nom2veterinario.setText("");
+     jt_ape1veterinario.setText("");
+     jt_ape2veterinario.setText("");
+     jt_edadveterinario.setText("");
+     jt_correoveterinario.setText("");
+     jt_tel1veterinario.setText("");
+     jt_tel2veterinario.setText("");
+     jt_dirveterinario.setText("");
+     Jidveterinario.setText("");
     }//GEN-LAST:event_BlimpiarveterinarioActionPerformed
 
     private void jt_nom2veterinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_nom2veterinarioActionPerformed
