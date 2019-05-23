@@ -129,5 +129,38 @@ public class ControlCuidador {
         return c;
 
     }
+      public LinkedList<Cuidador> Consultaraanimalesporcuidador(int ID){
+          LinkedList<Cuidador> link = new LinkedList<>();
+
+          ConnectBD objCon = new ConnectBD();
+          String sql = "SELECT id_cuidador, concat(nombrec1, ' ', nombrec2, ' ',  apellidoc1, ' ',  apellidoc2)  AS Nombre FROM ((cuidadores INNER JOIN cuidados ON"
+                  + " id_cuidador = id_cuidador_animal) INNER JOIN animales ON id_animal_cuidador= id_animal) WHERE id_animal = "+ID+";";
+        ResultSet rs = null;
+        Cuidador objc = null;
+        LinkedList<Cuidador> Acuidador=new LinkedList<Cuidador>() ;
+       if (objCon.crearConexion()) {
+            try {
+                Statement stat = objCon.getConexion().createStatement();
+                rs = stat.executeQuery(sql);
+               
+                while (rs.next()) {
+                    
+                    int Idret = rs.getInt(1);
+                    String nomCuidador = rs.getString(2);
+                    Cuidador objCuid = new Cuidador(nomCuidador, Idret);
+                    
+                   link.add(objCuid);
+                }
+                objCon.getConexion().close();
+            } catch (Exception e) {
+
+                System.out.println(e.toString());
+            }
+        }
+       
+
+        return link;
+      
+      }
 }
 

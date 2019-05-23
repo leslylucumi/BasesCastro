@@ -5,6 +5,10 @@
  */
 package vista;
 
+import control.ControlCitas;
+import control.Controlcuidados;
+import modelo.Cuidados;
+
 /**
  *
  * @author LeslyLC
@@ -115,7 +119,22 @@ public class InsertarCuidado extends javax.swing.JFrame {
     }//GEN-LAST:event_Jid_cuidador_animalActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       int id_animal_cuidador;
+        int id_cuidador_animal;
+        id_animal_cuidador = Integer.parseInt(Jid_animal_cuidador.getText());
+        id_cuidador_animal = Integer.parseInt(Jid_cuidador_animal.getText());
+
+        Controlcuidados objce = new Controlcuidados();
+        Cuidados objc = new Cuidados(id_animal_cuidador, id_cuidador_animal);
+        boolean f = objce.insertarCuidado(objc);
+
+        if (f) {
+
+            System.out.println("Se inserto el Cuidado");
+        } else {
+            System.out.println("No se inserto el cuidado");
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

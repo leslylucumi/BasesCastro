@@ -50,6 +50,12 @@ public class Cuidador {
         this.telc2 = telc2;
         this.dirc = dirc;
     }
+
+    public Cuidador(String nombrec1, int id_cuidador) {
+        this.nombrec1 = nombrec1;
+        this.id_cuidador = id_cuidador;
+    }
+    
     
 
 

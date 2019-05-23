@@ -37,7 +37,6 @@ public class ConsultarCuidador extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(754, 164));
-        setPreferredSize(new java.awt.Dimension(754, 164));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -106,7 +105,6 @@ public class ConsultarCuidador extends javax.swing.JFrame {
             jTable1.setValueAt(Lcuidador.get(i).getTelc1(), i, 7);
             jTable1.setValueAt(Lcuidador.get(i).getTelc2(), i, 8);
             jTable1.setValueAt(Lcuidador.get(i).getDirc(), i, 9);
-            
             
           //  jTable1.setValueAt(Lcuidador.get(i).getApellidoc1(), i, 4);
         

@@ -14,8 +14,8 @@ import modelo.Cuidados;
 public class Controlcuidados {
     
     
-       public boolean insertarCita(Cuidados obje) {
-        String sql="Insert into Cuidados (id_animal_veterinario,id_veterinario_animal)"+
+       public boolean insertarCuidado(Cuidados obje) {
+        String sql="Insert into Cuidados (id_animal_cuidador,id_cuidador_animal)"+
                 "value('"+obje.getId_animal_cuidador()+"','"+obje.getId_cuidador_animal()+"')";
         
         boolean f=false;
