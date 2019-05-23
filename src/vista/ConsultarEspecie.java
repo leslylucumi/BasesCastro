@@ -96,7 +96,10 @@ ControlEspecie objc = new ControlEspecie();
             jTable1.setValueAt(LEspecie.get(i).getId(), i, 0);
             jTable1.setValueAt(LEspecie.get(i).getNombreE(), i, 1);
             
-        }        // TODO add your handling code here:
+            
+        }
+        
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

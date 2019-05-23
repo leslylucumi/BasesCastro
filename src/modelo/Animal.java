@@ -32,6 +32,18 @@ public class Animal {
     private int id_Habitat;
     private int id_Alimentacion;
 
+    public Animal(int id, int edad, String genero, String descripcion, String nombre, double peso, int id_Especie, int id_Habitat, int id_Alimentacion) {
+        this.id = id;
+        this.edad = edad;
+        this.genero = genero;
+        this.descripcion = descripcion;
+        this.nombre = nombre;
+        this.peso = peso;
+        this.id_Especie = id_Especie;
+        this.id_Habitat = id_Habitat;
+        this.id_Alimentacion = id_Alimentacion;
+    }
+
     //  private String dirc;
     public Animal(int id, int edad, String imganimalcara, String imganimalcuerpo, String imganimal, String genero, String descripcion, String nombre, double peso, int id_Especie, int id_Habitat, int id_Alimentacion) {
         this.id = id;
