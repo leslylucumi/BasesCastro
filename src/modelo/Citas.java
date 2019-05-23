@@ -13,8 +13,15 @@ import java.sql.Statement;
  * @author LeslyLC
  */
 public class Citas {
+    private int id_citas;
     private int id_animal_veterinario;
     private int id_veterinario_animal;
+
+    public Citas(int id_citas, int id_animal_veterinario, int id_veterinario_animal) {
+        this.id_citas = id_citas;
+        this.id_animal_veterinario = id_animal_veterinario;
+        this.id_veterinario_animal = id_veterinario_animal;
+    }
 
     public Citas(int id_animal_veterinario, int id_veterinario_animal) {
         this.id_animal_veterinario = id_animal_veterinario;
@@ -23,6 +30,15 @@ public class Citas {
 
     public Citas() {
     }
+
+    public int getId_citas() {
+        return id_citas;
+    }
+
+    public void setId_citas(int id_citas) {
+        this.id_citas = id_citas;
+    }
+    
 
     public int getId_animal_veterinario() {
         return id_animal_veterinario;
@@ -42,8 +58,10 @@ public class Citas {
 
     @Override
     public String toString() {
-        return "Citas{" + "id_animal_veterinario=" + id_animal_veterinario + ", id_veterinario_animal=" + id_veterinario_animal + '}';
+        return "Citas{" + "id_citas=" + id_citas + ", id_animal_veterinario=" + id_animal_veterinario + ", id_veterinario_animal=" + id_veterinario_animal + '}';
     }
+
+  
     
          public boolean insertarCita(String sql) {
           ConnectBD objCon = new ConnectBD();

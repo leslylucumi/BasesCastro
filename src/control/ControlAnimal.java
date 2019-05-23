@@ -8,6 +8,7 @@ package control;
 import java.sql.Blob;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.LinkedList;
 import modelo.Animal;
 import modelo.ConnectBD;
 import modelo.Veterinario;
@@ -72,6 +73,41 @@ public class ControlAnimal {
 
     }
 //   
+    
+        public LinkedList<Animal> ConsultarAnimales () {
+        ConnectBD objCon = new ConnectBD();
+        String sql = "select* from animales";
+        ResultSet rs = null;
+        Animal obja = null;
+        LinkedList<Animal> LAnimales=new LinkedList<Animal>();
+
+        if (objCon.crearConexion()) {
+
+            String a = "";
+            try {
+                Statement stat = objCon.getConexion().createStatement();
+                rs = stat.executeQuery(sql);
+                while (rs.next()) {
+
+                    obja = new Animal(rs.getByte(1),rs.getInt(2), rs.getString(6),
+                            rs.getString(7), rs.getString(8), rs.getDouble(9), rs.getInt(10), rs.getInt(11), rs.getInt(12));
+                    LAnimales.add(obja);
+                    System.out.println(rs.getString(2));
+                    System.out.println(rs.getBlob(3));
+                    System.out.println(rs.getBlob(3).toString());
+                    a = rs.getString(3);
+                }
+
+                objCon.getConexion().close();
+            } catch (Exception e) {
+
+                System.out.println(e.toString());
+            }
+        }
+
+        return LAnimales;
+
+    }
 
     public boolean ModificarAnimales(Animal obja, int id_animal) {
         boolean c = false;
