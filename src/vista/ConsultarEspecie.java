@@ -20,6 +20,7 @@ public class ConsultarEspecie extends javax.swing.JFrame {
      */
     public ConsultarEspecie() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -34,10 +35,12 @@ public class ConsultarEspecie extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        Bcerrar = new javax.swing.JButton();
+        Batras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(405, 192));
-        setPreferredSize(new java.awt.Dimension(405, 192));
+        setMinimumSize(new java.awt.Dimension(405, 186));
+        setPreferredSize(new java.awt.Dimension(405, 186));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -55,10 +58,27 @@ public class ConsultarEspecie extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jButton1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jButton1.setText("Aceptar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        Bcerrar.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        Bcerrar.setText("Cerrar");
+        Bcerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BcerrarActionPerformed(evt);
+            }
+        });
+
+        Batras.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        Batras.setText("Atras");
+        Batras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BatrasActionPerformed(evt);
             }
         });
 
@@ -73,16 +93,24 @@ public class ConsultarEspecie extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Batras, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Bcerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Bcerrar)
+                        .addComponent(Batras))
+                    .addComponent(jButton1))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         pack();
@@ -101,6 +129,16 @@ ControlEspecie objc = new ControlEspecie();
         
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcerrarActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BcerrarActionPerformed
+
+    private void BatrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatrasActionPerformed
+        OpcionesConsultar abrir = new OpcionesConsultar();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BatrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,6 +176,8 @@ ControlEspecie objc = new ControlEspecie();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Batras;
+    private javax.swing.JButton Bcerrar;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
