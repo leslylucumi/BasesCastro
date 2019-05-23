@@ -80,6 +80,34 @@ public class ControlVeterinario {
         return Lveterinarios;
 
     }
+        public  LinkedList<Veterinario> Consultaranimalesxveterinario(int ID) {
+        ConnectBD objCon = new ConnectBD();
+        String sql = "SELECT id_verinario, concat(nombrev1, ' ', nombrev2, ' ',  apellidov1, ' ',  apellidov2)" + 
+                "AS Nombre FROM ((veterinarios INNER JOIN citas ON id_verinario = id_veterinario_animal) INNER JOIN animales ON id_animal_veterinario = id_animal) WHERE id_animal = "+ID+";";
+        ResultSet rs = null;
+        Veterinario objv = null;
+         LinkedList<Veterinario> Lveterinarios=new LinkedList<Veterinario>() ;
+
+        if (objCon.crearConexion()) {
+            try {
+                Statement stat = objCon.getConexion().createStatement();
+                rs = stat.executeQuery(sql);
+                while (rs.next()) {
+                    objv = new Veterinario (rs.getString(2),rs.getInt(1));
+                    
+                   Lveterinarios.add(objv);
+                   // System.out.println(rs.getString(2));
+                }
+                objCon.getConexion().close();
+            } catch (Exception e) {
+
+                System.out.println(e.toString());
+            }
+        }
+
+        return Lveterinarios;
+
+    }
         public boolean ModificarVeterinarios(Veterinario objv, int id_veterinario) {
         boolean c = false;
 

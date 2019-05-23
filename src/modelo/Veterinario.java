@@ -24,6 +24,12 @@ public class Veterinario {
     private String dirv;
     private int id_veterinario;
 
+    public Veterinario(String nombrev1, int id_veterinario) {
+        this.nombrev1 = nombrev1;
+        this.id_veterinario = id_veterinario;
+    }
+    
+
     public Veterinario(int id_veterinario,String nombrev1, String nombrev2, String apellidov1, String apellidov2, int edadv, String correov, String telv1, String telv2, String dirv) {
         this.nombrev1 = nombrev1;
         this.nombrev2 = nombrev2;

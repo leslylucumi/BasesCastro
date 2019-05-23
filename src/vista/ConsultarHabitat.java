@@ -13,12 +13,12 @@ import modelo.Habitat;
  *
  * @author Ángela
  */
-public class Consultarhabitat extends javax.swing.JFrame {
+public class ConsultarHabitat extends javax.swing.JFrame {
 
     /**
      * Creates new form consultarhabitat
      */
-    public Consultarhabitat() {
+    public ConsultarHabitat() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -40,7 +40,6 @@ public class Consultarhabitat extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(430, 187));
-        setPreferredSize(new java.awt.Dimension(430, 187));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -161,21 +160,23 @@ public class Consultarhabitat extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Consultarhabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultarHabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Consultarhabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultarHabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Consultarhabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultarHabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Consultarhabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultarHabitat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Consultarhabitat().setVisible(true);
+                new ConsultarHabitat().setVisible(true);
             }
         });
     }

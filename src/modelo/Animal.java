@@ -74,6 +74,12 @@ public class Animal {
         this.id_Alimentacion = id_Alimentacion;
     }
 
+    public Animal(int id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    
     public int getId() {
         return id;
     }

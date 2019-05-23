@@ -69,15 +69,23 @@ public class CosultarAnimalesxCuidador extends javax.swing.JFrame {
                 {null, null},
                 {null, null},
                 {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
                 {null, null}
             },
             new String [] {
-                "Id animal", "Nombre Completo"
+                "ID", "Nombre Completo"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 460, 180));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 460, 90));
 
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         jButton1.setText("Aceptar");
@@ -86,7 +94,7 @@ public class CosultarAnimalesxCuidador extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
         jLabel1.setText("Id Animal");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
@@ -105,7 +113,7 @@ public class CosultarAnimalesxCuidador extends javax.swing.JFrame {
                 Bcerrar1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Bcerrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 260, 80, -1));
+        getContentPane().add(Bcerrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, 80, -1));
 
         Batras1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         Batras1.setText("Atras");
@@ -114,7 +122,7 @@ public class CosultarAnimalesxCuidador extends javax.swing.JFrame {
                 Batras1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Batras1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 70, -1));
+        getContentPane().add(Batras1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 70, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -108,6 +108,36 @@ public class ControlAnimal {
         return LAnimales;
 
     }
+        
+     public LinkedList<Animal> Consultarespecieporanimal (int ID) {
+        ConnectBD objCon = new ConnectBD();
+        String sql = "SELECT id_animal, nombre FROM (especies INNER JOIN animales ON id_especie_animal = id_especie) WHERE id_especie = "+ID+";";
+        ResultSet rs = null;
+        Animal obja = null;
+        LinkedList<Animal> LAnimales=new LinkedList<Animal>();
+
+        if (objCon.crearConexion()) {
+
+            String a = "";
+            try {
+                Statement stat = objCon.getConexion().createStatement();
+                rs = stat.executeQuery(sql);
+                while (rs.next()) {                
+                    obja = new Animal(rs.getInt(1), rs.getString(2));
+                     
+                    LAnimales.add(obja);
+                }
+
+                objCon.getConexion().close();
+            } catch (Exception e) {
+
+                System.out.println(e.toString());
+            }
+        }
+
+        return LAnimales;
+
+    }
 
     public boolean ModificarAnimales(Animal obja, int id_animal) {
         boolean c = false;
