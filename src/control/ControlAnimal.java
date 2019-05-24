@@ -201,4 +201,13 @@ public class ControlAnimal {
         return c;
 
     }
+    public Animal BorrarAnimal(int id_animal) {
+        ConnectBD objCon = new ConnectBD();
+        String sql = "delete from animales where (id_animal=)" + id_animal + "";
+        ResultSet rs = null;
+        Animal obja = null;
+        obja = new Animal(); 
+      
+        return obja; 
+}
 }
