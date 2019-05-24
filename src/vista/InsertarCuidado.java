@@ -138,10 +138,9 @@ public class InsertarCuidado extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-     int id_animal_cuidador;
-     int id_cuidador_animal;
-     id_animal_cuidador=Integer.parseInt(Jid_animal_cuidador.getText());
-     id_cuidador_animal=Integer.parseInt(Jid_cuidador_animal.getText());
+    
+     Jid_animal_cuidador.setText("");
+     Jid_cuidador_animal.setText("");
      
 
     }//GEN-LAST:event_jButton2ActionPerformed
